@@ -1,0 +1,25 @@
+/* Carrosséis */
+.carrosseis {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.carrossel {
+    margin-bottom: 2rem;
+}
+
+.carrossel-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.carrossel-item {
+    flex: 0 0 200px;
+    background: #eee;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

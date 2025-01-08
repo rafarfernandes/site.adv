@@ -1,0 +1,39 @@
+/* Slide */
+.slide {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+.slide-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-item {
+    flex: 1 0 100%;
+    text-align: center;
+    padding: 2rem;
+    background-color: #ccc;
+}
+
+.slide button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.slide .prev {
+    left: 10px;
+}
+
+.slide .next {
+    right: 10px;
+}

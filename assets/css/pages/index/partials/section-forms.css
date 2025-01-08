@@ -1,0 +1,30 @@
+/* Contato */
+.contato {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contato form input,
+.contato form textarea,
+.contato form button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contato form button {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}

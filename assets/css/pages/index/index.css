@@ -1,0 +1,38 @@
+@import './partials/section-slide.css';
+@import './partials/section-carrosseis.css';
+@import './partials/section-escritorio.css';
+@import './partials/section-servicos.css';
+@import './partials/section-equipe.css';
+@import './partials/section-forms.css';
+
+@import '../../global/global.css';
+
+
+
+body {
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
