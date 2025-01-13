@@ -1,0 +1,58 @@
+footer {
+    background-color: #1F1F1F; /* Cor do fundo */
+    color: #FFFFFF; /* Cor do texto */
+    padding: 35px 70px; /* Espaçamento superior e lateral */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Alinha os elementos lado a lado */
+    align-items: flex-start; /* Alinha ao topo */
+}
+
+.footer-info {
+    width: 361px; /* Largura fixa da seção de texto */
+}
+
+.footer-info h3 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 27.6px;
+    margin-bottom: 12px; /* Espaçamento inferior */
+}
+
+.footer-info p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 27.6px;
+    margin-bottom: 12px; /* Espaçamento entre as linhas */
+}
+
+.footer-info p span {
+    font-size: 20px; /* Tamanho dos ícones */
+    margin-right: 10px; /* Espaçamento do ícone */
+}
+
+.footer-map {
+    width: 429px; /* Largura fixa do mapa */
+    height: 291.81px; /* Altura fixa */
+}
+
+.footer-map iframe {
+    width: 100%; /* Preenche todo o espaço disponível */
+    height: 100%;
+    border: 0; /* Remove bordas */
+}
+
+.footer-logo {
+    margin-top: 35px; /* Espaço superior */
+    width: 58.63px;
+    height: 63px;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: auto;
+}

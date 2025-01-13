@@ -1,0 +1,80 @@
+
+.slide {
+    position: relative;
+    width: 100%;
+    max-height: 804px; /* Ajuste da altura máxima */
+    overflow: hidden;
+    background-color: var(--cor-azul-escuro);
+    margin-top: 0; /* Remove o espaço acima da section */
+}
+
+
+.slide-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-item {
+    flex: 1 0 100%;
+    text-align: center;
+    position: relative; /* Para a opacidade da imagem */
+}
+
+.slide-item img {
+    width: 1440px; /* Largura fixa */
+    height: 804px; /* Altura fixa */
+    object-fit: cover; /* Ajusta a imagem para cobrir o container */
+    opacity: 0.25; /* Define a opacidade */
+}
+
+.slide-item .logo {
+    position: absolute;
+    width: 252px;
+    height: 84.36px;
+    top: 163.15px;
+    left: 102px;
+}
+
+.slide-item .text-container {
+    position: absolute;
+    width: 529px;
+    height: 246px;
+    top: 338px;
+    left: 102px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.slide-item .text-container .title {
+    width: 529px;
+    height: 154px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 76.8px;
+    color: #FFFFFF;
+}
+
+.slide-item .text-container .button {
+    width: 218px; /* Largura fixa */
+    height: 32px; /* Altura ajustável */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    background-color: var(--cor-azul-vibrante); /* Cor do fundo */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remover sublinhado */
+    text-align: center; /* Centralizar texto */
+    line-height: 31.74px; /* Para centralizar verticalmente */
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Transição suave */
+    font-size: 23px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+}
+
+
+/* Efeito de hover para o botão */
+.slide-item .text-container .button:hover {
+    background-color: #0056b3; /* Cor de fundo quando hover */
+}

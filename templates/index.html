@@ -1,0 +1,301 @@
+
+{% extends 'base/base.html' %}
+
+{% load static %} 
+
+{% block content %}
+
+<!-- Slide -->
+<section id="slide" class="slide">
+    <div class="slide-container">
+        <div class="slide-item">
+            <img src="{% static 'images/pages/index/balanca-desktop.png' %}" alt="Slide" class="slide-image desktop">
+            <img src="{% static 'images/pages/index/balanca-mobile.png' %}" alt="Slide" class="slide-image mobile">
+            <img src="{% static 'images/pages/index/marca-dagua-branca.png' %}" alt="Logo" class="logo">
+            <div class="text-container">
+                <div class="text-block">
+                    <h1 class="title">Serviços Jurídicos de excelência</h1>
+                    <a href="link/to/meeting" class="button">
+                        Agende uma reunião
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                          </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Carrosséis -->
+<div class="carousel-container">
+    <div class="carousel">
+      <!-- Section 1 -->
+      <section class="principal">
+        <div class="content">
+          <!-- Botão esquerdo -->
+          <button class="nav-btn left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223"/>
+            </svg>
+          </button>
+  
+          <!-- Bloco de texto -->
+          <div class="text-block">
+            <div class="header">
+              <div class="vertical-bar"></div>
+              <p class="title">Marcus Salgado</p>
+            </div>
+            <p class="description">
+              Possui mais de 15 anos de atuação na assessoria Gestão Pública Municipalista, 
+              tendo ocupado posições estratégicas, como Procurador-Geral, Controlador-Geral 
+              e Secretário de Planejamento. <br><br>
+              Além disso, tem vasta experiência na assessoria de municípios e câmaras municipais, 
+              contribuindo significativamente para a administração. <br><br>
+              Sua trajetória é marcada pela excelência, sendo amplamente reconhecida, referendando-o 
+              como um dos advogados mais proeminentes em sua área de atuação da nova geração.
+            </p>
+          </div>
+  
+          <!-- Bloco de imagem -->
+          <div class="image-block">
+            <div class="rectangle"></div>
+            <img src="path/to/your/image.jpg" alt="Marcus Salgado" class="photo">
+          </div>
+  
+          <!-- Botão direito -->
+          <button class="nav-btn right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+  
+      <!-- Section 2 -->
+      <section class="principal">
+        <div class="content">
+          <button class="nav-btn left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223"/>
+            </svg>
+          </button>
+  
+          <div class="text-block">
+            <div class="header">
+              <div class="vertical-bar"></div>
+              <p class="title">Marcus Salgado</p>
+            </div>
+            <p class="description">
+              Possui mais de 15 anos de atuação na assessoria Gestão Pública Municipalista, 
+              tendo ocupado posições estratégicas, como Procurador-Geral, Controlador-Geral 
+              e Secretário de Planejamento. <br><br>
+              Além disso, tem vasta experiência na assessoria de municípios e câmaras municipais, 
+              contribuindo significativamente para a administração. <br><br>
+              Sua trajetória é marcada pela excelência, sendo amplamente reconhecida, referendando-o 
+              como um dos advogados mais proeminentes em sua área de atuação da nova geração.
+            </p>
+          </div>
+  
+          <div class="image-block">
+            <div class="rectangle"></div>
+            <img src="path/to/your/image.jpg" alt="Marcus Salgado" class="photo">
+          </div>
+  
+          <button class="nav-btn right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+  
+      <!-- Section 3 -->
+      <section class="principal">
+        <div class="content">
+          <button class="nav-btn left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223"/>
+            </svg>
+          </button>
+  
+          <div class="text-block">
+            <div class="header">
+              <div class="vertical-bar"></div>
+              <p class="title">Marcus Salgado</p>
+            </div>
+            <p class="description">
+              Possui mais de 15 anos de atuação na assessoria Gestão Pública Municipalista, 
+              tendo ocupado posições estratégicas, como Procurador-Geral, Controlador-Geral 
+              e Secretário de Planejamento. <br><br>
+              Além disso, tem vasta experiência na assessoria de municípios e câmaras municipais, 
+              contribuindo significativamente para a administração. <br><br>
+              Sua trajetória é marcada pela excelência, sendo amplamente reconhecida, referendando-o 
+              como um dos advogados mais proeminentes em sua área de atuação da nova geração.
+            </p>
+          </div>
+  
+          <div class="image-block">
+            <div class="rectangle"></div>
+            <img src="path/to/your/image.jpg" alt="Marcus Salgado" class="photo">
+          </div>
+  
+          <button class="nav-btn right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+
+
+
+
+
+  
+
+<!-- Escritório de advocacia -->
+<section class="secao-advocacia">
+    <div class="conteudo-container">
+        <div class="texto-conteudo">
+            <h1>Escritório de Advocacia</h1>
+            <div class="barra-vertical"></div>
+            <p class="subtitulo">
+                Especializados em Direito Público e Administrativo, oferecemos soluções jurídicas de excelência.
+            </p>
+            <p class="descricao">
+                Com vasta experiência em convênios, contratos, processos licitatórios, processos administrativos,
+                assessoria jurídica e procedimentos correlatos, unimos conhecimento técnico e um relacionamento de
+                confiança com nossos clientes e parceiros para garantir resultados efetivos e de alta qualidade.
+            </p>
+        </div>
+        <div class="imagem-container">
+            <img src="./image.png" alt="Escritório de Advocacia">
+        </div>
+    </div>
+    <div class="estatisticas-container">
+        <div class="estatistica-item">
+            <h2>+ de 7000</h2>
+            <p>Consultorias Aplicadas</p>
+        </div>
+        <div class="estatistica-item">
+            <h2>96%</h2>
+            <p>Casos de Sucesso</p>
+        </div>
+        <div class="estatistica-item">
+            <h2>R$ 100 M</h2>
+            <p>Custos Recuperados para Clientes</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Serviços -->
+<section class="secao-servicos">
+    <h2 class="titulo-servicos">
+        <span class="linha-vertical"></span> Serviços
+    </h2>
+    <div class="container-servicos">
+        <div class="caixa-servico">
+            <div class="icone-container">
+                <img src="icon1.png" alt="Ícone representando tribunal" class="icone">
+            </div>
+            <h3 class="titulo-servico">Assessoria Jurídica</h3>
+            <p class="descricao-servico">Aos Tribunais de 1ª e 2ª Instância</p>
+        </div>
+        <div class="caixa-servico">
+            <div class="icone-container">
+                <img src="icon2.png" alt="Ícone representando martelo da justiça" class="icone">
+            </div>
+            <h3 class="titulo-servico">Assessoria Jurídica</h3>
+            <p class="descricao-servico">No patrocínio de Defesas e Acompanhamento no TCE e TCU</p>
+        </div>
+        <div class="caixa-servico">
+            <div class="icone-container">
+                <img src="icon3.png" alt="Ícone representando contratos" class="icone">
+            </div>
+            <h3 class="titulo-servico">Assessoria Jurídica</h3>
+            <p class="descricao-servico">A Licitações e Contratos Administrativos</p>
+        </div>
+        <div class="caixa-servico">
+            <div class="icone-container">
+                <img src="icon4.png" alt="Ícone representando auditoria" class="icone">
+            </div>
+            <h3 class="titulo-servico">Assessoria Jurídica</h3>
+            <p class="descricao-servico">A Controle Interno e Auditoria Preventiva</p>
+        </div>
+    </div>
+    <a href="#" class="botao-cta">Quero uma assessoria</a>
+</section>
+
+
+
+
+
+
+<!-- Equipe -->
+<section class="custom-section">
+    <h1 class="custom-heading">Conheça nossa equipe</h1>
+</section>
+  
+  
+
+
+<!-- Formulário -->
+<section class="contact-section">
+    <div class="contact-left">
+        <h2>Fale Conosco</h2>
+        <h3>Marcus Salgado Advogados Associados</h3>
+        <p>A sua opinião é fundamental para nós! Entre em contato sempre que precisar. Estamos aqui para ajudar com qualquer dúvida ou esclarecimento.</p>
+    </div>
+    <div class="contact-right">
+        <form id="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone com DDD</label>
+                    <input type="tel" id="phone" placeholder="Digite seu telefone" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto</label>
+                    <select id="subject" required>
+                        <option value="" disabled selected>Selecione o assunto</option>
+                        <option value="reuniao">Quero solicitar uma reunião</option>
+                        <option value="duvida">Quero tirar uma dúvida</option>
+                        <option value="sugestao">Quero fazer uma sugestão</option>
+                        <option value="trabalho">Quero trabalhar com vocês</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" rows="4" placeholder="Digite sua mensagem" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

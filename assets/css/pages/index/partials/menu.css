@@ -1,0 +1,117 @@
+/* Estilo geral */
+header {
+    background: #FFFFFF;
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 100%; /* Garante que o fundo acompanhe a tela */
+    margin: 0 auto;
+}
+
+header .menu {
+    position: relative;
+}
+
+header .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 109px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.08px;
+    color: #201E1E;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Logo */
+header .menu ul li a img {
+    width: 41.87px;
+    height: 45px;
+}
+
+/* Menu Toggle (Ícone para Mobile) */
+.menu-toggle {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 7.22px;
+    left: 1rem;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 24.75px;
+    height: 3px;
+    background-color: #000000;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra o ícone */
+        align-items: center;
+    }
+
+    header .menu ul {
+        display: none; /* Esconde o menu por padrão */
+        flex-direction: column; /* Layout vertical */
+        gap: 1.5rem;
+        background: #FFFFFF;
+        position: absolute;
+        top: 100%;
+        right: 0; /* Alinha o menu à direita */
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header .menu ul.show {
+        display: flex; /* Mostra o menu quando ativo */
+    }
+
+    header .menu ul li {
+        width: 100%; /* Links ocupam a largura total */
+        text-align: center;
+    }
+
+    header .menu ul li a {
+        font-size: 14px;
+    }
+
+    header .menu ul li a img {
+        width: 30px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Espaço entre a logo e o ícone */
+    }
+
+    header .menu ul {
+        gap: 1rem;
+        justify-content: flex-end; /* Garante que os itens do menu fiquem à direita */
+    }
+
+    header .menu ul li a img {
+        width: 25px;
+        height: 28px;
+    }
+    
+    header .menu ul.show {
+        right: 0; /* Alinha o menu à direita */
+    }
+} 

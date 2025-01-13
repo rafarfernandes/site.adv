@@ -1,0 +1,67 @@
+header {
+    background: #FFFFFF; /* Fundo branco para o header */
+    padding: 1rem 0;
+    text-align: center;
+    width: 1440px; /* Largura fixa */
+    height: 73px; /* Altura fixa */
+    margin-bottom: 0; /* Remove o espaço abaixo do header */
+}
+
+header .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 109px; /* Espaçamento */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.08px;
+    color: var(--cor-texto); /* Cor do texto */
+    background: transparent; /* Fundo transparente para evitar o cinza */
+}
+
+/* Remove qualquer estilo de hover indesejado */
+header .menu ul li a:hover {
+    background: transparent; /* Garante que o hover não adicione fundo */
+}
+
+/* Configurações específicas para cada item do menu */
+header .menu ul li a.marcus {
+    width: 114px; /* Tamanho específico para "Quem é Marcus" */
+    height: 22px;
+    gap: 10px; /* Espaçamento específico */
+}
+
+header .menu ul li a.escritorio {
+    width: 65px; /* Tamanho específico para "Escritório" */
+    height: 22px;
+}
+
+header .menu ul li a.servicos {
+    width: 58px; /* Tamanho específico para "Serviços" */
+    height: 22px;
+}
+
+header .menu ul li a.advogados {
+    width: 83px; /* Tamanho específico para "Advogados" */
+    height: 22px;
+}
+
+header .menu ul li a.fale-conosco {
+    width: 90px; /* Tamanho específico para "Fale Conosco" */
+    height: 22px;
+}
+
+header .menu ul li a.onde-nos-achar {
+    width: 115px; /* Tamanho específico para "Onde nos achar" */
+    height: 22px;
+}
+
+header .menu ul li a img {
+    height: 40px; /* Ajuste a altura conforme necessário */
+}

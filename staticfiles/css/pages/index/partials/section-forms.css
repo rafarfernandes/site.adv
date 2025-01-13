@@ -1,0 +1,89 @@
+/* Estilo geral da seção */
+.contact-section {
+    width: 1440px;
+    height: 910px;
+    background-color: #171D2B;
+    display: flex;
+    padding: 125px 70px;
+    gap: 70px;
+    color: #FFFFFF;
+}
+
+/* Estilo da parte esquerda */
+.contact-left {
+    width: 510px;
+}
+
+.contact-left h2 {
+    font-size: 47px;
+    font-weight: 400;
+    font-family: 'Alata', sans-serif;
+    margin-bottom: 30px;
+}
+
+.contact-left h3 {
+    font-size: 34px;
+    font-weight: 400;
+    font-family: 'Alata', sans-serif;
+    line-height: 46.92px;
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+    line-height: 28.8px;
+}
+
+/* Estilo da parte direita */
+.contact-right {
+    width: 640px;
+    height: 456px;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+.contact-right .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-right label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Barlow', sans-serif;
+    box-sizing: border-box;
+}
+
+.contact-right button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #25D366;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.contact-right button:hover {
+    background-color: #1AC25D;
+}

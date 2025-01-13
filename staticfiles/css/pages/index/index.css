@@ -1,0 +1,24 @@
+@import '../../global/global.css';
+
+@import './partials/menu.css';
+@import './partials/section-slide.css';
+@import './partials/section-carrosseis.css';
+@import './partials/section-escritorio.css';
+@import './partials/section-servicos.css';
+@import './partials/section-equipe.css';
+@import './partials/section-forms.css';
+@import './partials/_footer.css';
+
+
+
+
+
+
+
+body {
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+

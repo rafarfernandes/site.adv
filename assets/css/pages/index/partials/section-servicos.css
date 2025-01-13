@@ -1,22 +1,119 @@
-/* Serviços */
-.servicos {
-    padding: 2rem;
-    background-color: #fff;
+/* Seção de serviços */
+.secao-servicos {
+    background-color: #171D2B;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 60px 20px;
 }
 
-.servicos ul {
-    list-style: none;
+/* Título da seção com linha vertical */
+.titulo-servicos {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo-servicos .linha-vertical {
+    width: 5px;
+    height: 30px;
+    background-color: #CF6C36;
+}
+
+/* Container de serviços */
+.container-servicos {
     display: flex;
     justify-content: space-around;
+    align-items: stretch; /* Garante que todos os itens tenham a mesma altura */
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.servicos li {
-    flex: 0 0 200px;
-    padding: 1rem;
-    background: #eee;
+/* Cartões de serviço */
+.caixa-servico {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 240px; /* Largura fixa */
+    height: 300px; /* Altura fixa para uniformizar os cartões */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo de cima para baixo */
+    justify-content: space-between; /* Garante espaçamento entre os elementos */
+}
+
+.caixa-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícone */
+.icone-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border: 2px solid #CF6C36;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone {
+    max-width: 40px;
+    height: auto;
+}
+
+.titulo-servico {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.descricao-servico {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Botão CTA */
+.botao-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #CF6C36;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.botao-cta:hover {
+    background-color: #B9592D;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-servicos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixa-servico {
+        width: 100%;
+        max-width: 400px;
+        height: auto; /* Permite altura variável em telas pequenas */
+    }
 }

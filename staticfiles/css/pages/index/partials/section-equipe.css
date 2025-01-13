@@ -1,0 +1,27 @@
+/* Equipe */
+.equipe {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.equipe h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.carrossel-equipe {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.equipe-item {
+    flex: 0 0 200px;
+    background: #ddd;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}

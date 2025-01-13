@@ -1,25 +1,170 @@
-/* Carrosséis */
-.carrosseis {
-    padding: 2rem;
-    background-color: #fff;
-}
-
-.carrossel {
-    margin-bottom: 2rem;
-}
-
-.carrossel-container {
+/* Body básico */
+body {
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  /* Container principal do carrossel */
+  .carousel-container {
+    position: relative;
+    width: 1440px;
+    height: 858px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* Carrossel com transição suave */
+  .carousel {
     display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    padding: 1rem 0;
-}
-
-.carrossel-item {
-    flex: 0 0 200px;
-    background: #eee;
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
+    transition: transform 0.6s ease;
+    width: calc(1440px * 3); /* 3 sections */
+  }
+  
+  /* Cada section */
+  .principal {
+    width: 1440px;
+    height: 858px;
+    flex-shrink: 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Estilo do conteúdo */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+  }
+  
+  /* Bloco de texto */
+  .text-block {
+    width: 45%;
+    padding: 20px 30px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .vertical-bar {
+    width: 2px;
+    height: 46.92px;
+    background-color: #CF6C36;
+    margin-right: 12px;
+  }
+  
+  .title {
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 46.92px;
+    color: #201E1E;
+  }
+  
+  .description {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #201E1E;
+    text-align: justify;
+  }
+  
+  /* Bloco de imagem */
+  .image-block {
+    position: relative;
+    width: 45%;
+  }
+  
+  .rectangle {
+    width: 625px;
+    height: 426px;
+    background-color: #07233B;
+    position: absolute;
+    top: 25px;
+    left: 16px;
+  }
+  
+  .photo {
+    width: 617.36px;
+    height: 419px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Botões de navegação */
+  .nav-btn {
+    background: #07233B;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .nav-btn svg {
+    fill: #ffffff;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+  }
+  
+  .nav-btn:hover {
+    transform: scale(1.2);
+    background: #CF6C36;
+  }
+  
+  .nav-btn:hover svg {
+    fill: #07233B;
+  }
+  
+  /* Botão esquerdo: ao lado do texto */
+  .nav-btn.left {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Botão direito: ao lado da imagem */
+  .nav-btn.right {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1024px) {
+    .nav-btn {
+      padding: 10px;
+    }
+  
+    .nav-btn.left {
+      left: 2%;
+    }
+  
+    .nav-btn.right {
+      right: 2%;
+    }
+  
+    .text-block, .image-block {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .vertical-bar {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,22 @@
+/* Serviços */
+.servicos {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.servicos ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.servicos li {
+    flex: 0 0 200px;
+    padding: 1rem;
+    background: #eee;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

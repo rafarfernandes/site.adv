@@ -1,0 +1,46 @@
+/* fonts.css */
+
+/* Fontes - Alata (para títulos) */
+@font-face {
+    font-family: 'Alata';
+    src: url('https://fonts.gstatic.com/s/alata/v14/-W_9XJX28fSHaJ3zXh7k.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Fontes - Barlow (para parágrafos e variações de peso) */
+@font-face {
+    font-family: 'Barlow';
+    src: url('https://fonts.gstatic.com/s/barlow/v18/7cHpv4kjgoGqM7E3b8s8yn4hnCci.woff2') format('woff2');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('https://fonts.gstatic.com/s/barlow/v18/7cHov4kjgoGqM7E3b8s8wnUhn-5bGA.woff2') format('woff2');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('https://fonts.gstatic.com/s/barlow/v18/7cHov4kjgoGqM7E3b8s8zn8hn-5bGA.woff2') format('woff2');
+    font-weight: 600; /* Semibold */
+    font-style: normal;
+}
+
+/* Configuração global para reutilizar as fontes */
+body {
+    font-family: 'Barlow', sans-serif; /* Fonte padrão para o corpo */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alata', sans-serif; /* Usar Alata nos títulos */
+    font-weight: normal;
+}
+
+p {
+    font-family: 'Barlow', sans-serif; /* Usar Barlow nos parágrafos */
+    font-weight: 400; /* Regular */
+}
