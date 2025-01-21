@@ -1,149 +1,182 @@
+/* ========================= */
 /* Estilos Gerais */
+/* ========================= */
 body {
-    font-family: 'Barlow', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #F8F8F8;
+  font-family: 'Barlow', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F8F8F8;
 }
 
+/* ========================= */
 /* Seção Principal */
+/* ========================= */
 .secao-advocacia {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 50px 20px;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .conteudo-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
+
+
+/* ========================= */
+/* Títulos com Barra */
+/* ========================= */
+.titulo-com-barra {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espaço entre a barra e o texto */
+}
+
+.barra-vertical {
+  width: 2px;
+  height: 50px;
+  background-color: #cf6c36; /* Cor da barra */
+}
+
+/* ========================= */
+/* Texto na Seção de Advocacia */
+/* ========================= */
 .texto-conteudo {
-    max-width: 600px;
-    text-align: left; /* Alinhamento à esquerda */
-    position: relative;
+  max-width: 600px;
+  text-align: left;
 }
 
 .texto-conteudo h1 {
-    font-family: 'Alata', sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 48px;
-    color: #201E1E;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espaço entre a barra e o título */
+  font-family: 'Alata', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #201E1E;
 }
 
+.texto-conteudo .subtitulo {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #201E1E;
+  margin-top: 15px;
+}
 
-
-.texto-conteudo .subtitulo,
 .texto-conteudo .descricao {
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #201E1E;
-    margin-bottom: 20px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #505050;
+  margin-top: 20px;
 }
 
+
+/* ========================= */
+/* Imagem Responsiva */
+/* ========================= */
 .imagem-container {
-    width: 100%;
-    max-width: 600px;
-    aspect-ratio: 16 / 9;
-    background-color: #07233B;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  background-color: #07233B;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .imagem-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
+/* ========================= */
 /* Seção de Estatísticas */
+/* ========================= */
 .estatisticas-container {
-    width: 100%;
-    max-width: 1308px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #FFFFFF;
-    border: 4px solid #1160A3;
-    border-radius: 15px;
-    padding: 20px 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    gap: 30px;
+  width: 100%;
+  max-width: 1308px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 4px solid #1160A3;
+  border-radius: 15px;
+  padding: 20px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 30px;
 }
 
 .estatistica-item {
-    text-align: center;
-    flex: 1;
+  text-align: center;
+  flex: 1;
 }
 
 .estatistica-item h2 {
-    font-family: 'Alata', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    color: #201E1E;
-    margin-bottom: 10px;
+  font-family: 'Alata', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  color: #201E1E;
+  margin-bottom: 10px;
 }
 
 .estatistica-item p {
-    font-family: 'Alata', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    color: #201E1E;
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #201E1E;
 }
 
+/* ========================= */
 /* Responsividade */
+/* ========================= */
 @media (max-width: 1024px) {
-    .conteudo-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .conteudo-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .imagem-container {
-        width: 100%;
-    }
+  .imagem-container {
+    width: 100%;
+  }
 
-    .estatisticas-container {
-        flex-wrap: wrap;
-        padding: 20px;
-        gap: 20px;
-    }
+  .estatisticas-container {
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 768px) {
-    .texto-conteudo h1 {
-        font-size: 28px;
-        line-height: 38px;
-    }
+  .texto-conteudo h1 {
+    font-size: 28px;
+    line-height: 38px;
+  }
 
-    .estatistica-item h2 {
-        font-size: 24px;
-    }
+  .estatistica-item h2 {
+    font-size: 24px;
+  }
 
-    .estatistica-item p {
-        font-size: 16px;
-    }
+  .estatistica-item p {
+    font-size: 16px;
+  }
 }

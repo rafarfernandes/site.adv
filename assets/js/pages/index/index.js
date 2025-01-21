@@ -29,26 +29,9 @@ document.querySelector('.next').addEventListener('click', () => {
 });
 
 // Carrosséis
-const carousel = document.querySelector('.carousel');
-const leftBtn = document.querySelector('.nav-btn.left');
-const rightBtn = document.querySelector('.nav-btn.right');
 
-let currentIndex = 0;
 
-const updateCarousel = () => {
-  const offset = currentIndex * -1440; // Move by section width
-  carousel.style.transform = `translateX(${offset}px)`;
-};
 
-rightBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % 3; // Loop back after last
-  updateCarousel();
-});
-
-leftBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + 3) % 3; // Loop back to first
-  updateCarousel();
-});
 
 
 //Equipe 

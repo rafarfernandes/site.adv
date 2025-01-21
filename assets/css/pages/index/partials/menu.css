@@ -1,117 +1,147 @@
-/* Estilo geral */
-header {
-    background: #FFFFFF;
-    padding: 1rem 0;
-    width: 100%;
-    max-width: 100%; /* Garante que o fundo acompanhe a tela */
-    margin: 0 auto;
-}
-
-header .menu {
-    position: relative;
-}
-
-header .menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 109px;
-    align-items: center;
-    padding: 0;
+/* Reset básico */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header .menu ul li a {
-    text-decoration: none;
+body {
     font-family: 'Alata', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22.08px;
-    color: #201E1E;
-    display: inline-block;
-    text-align: center;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Estilo do cabeçalho */
+header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky; /* Fixa o menu no topo ao rolar a página */
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
 }
 
 /* Logo */
-header .menu ul li a img {
-    width: 41.87px;
-    height: 45px;
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
 }
 
-/* Menu Toggle (Ícone para Mobile) */
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Itens do menu */
+.menu-items {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu-items li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+.menu-items li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #201E1E;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-items li a:hover {
+    background-color: #201E1E;
+    color: #ffffff;
+    transform: translateY(-3px); /* Animação para levantar o item no hover */
+}
+
+/* Ícone do menu para mobile */
 .menu-toggle {
-    display: none; /* Escondido por padrão */
-    position: absolute;
-    top: 7.22px;
-    left: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
     cursor: pointer;
 }
 
 .menu-toggle .bar {
-    width: 24.75px;
+    width: 30px;
     height: 3px;
     background-color: #000000;
-    margin: 3px 0;
     border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex; /* Mostra o ícone */
-        align-items: center;
-    }
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
 
-    header .menu ul {
-        display: none; /* Esconde o menu por padrão */
-        flex-direction: column; /* Layout vertical */
-        gap: 1.5rem;
-        background: #FFFFFF;
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Menu responsivo */
+@media (max-width: 768px) {
+    .menu-items {
+        display: none;
+        flex-direction: column;
         position: absolute;
         top: 100%;
-        right: 0; /* Alinha o menu à direita */
+        right: 0;
+        background-color: #ffffff;
         width: 100%;
         padding: 1rem 0;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: max-height 0.3s ease;
+        overflow: hidden;
     }
 
-    header .menu ul.show {
-        display: flex; /* Mostra o menu quando ativo */
+    .menu-items.active {
+        display: flex;
     }
 
-    header .menu ul li {
-        width: 100%; /* Links ocupam a largura total */
+    .menu-items li {
         text-align: center;
     }
 
-    header .menu ul li a {
-        font-size: 14px;
+    .menu-items li a {
+        padding: 1rem;
+        font-size: 1.2rem;
     }
 
-    header .menu ul li a img {
-        width: 30px;
-        height: 32px;
+    .menu-toggle {
+        display: flex;
     }
 }
 
+/* Menu para telas muito pequenas */
 @media (max-width: 480px) {
-    header .menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; /* Espaço entre a logo e o ícone */
+    .menu {
+        padding: 0.8rem 1.5rem;
     }
 
-    header .menu ul {
-        gap: 1rem;
-        justify-content: flex-end; /* Garante que os itens do menu fiquem à direita */
+    .logo img {
+        height: 40px;
     }
 
-    header .menu ul li a img {
-        width: 25px;
-        height: 28px;
+    .menu-items li a {
+        font-size: 1rem;
     }
-    
-    header .menu ul.show {
-        right: 0; /* Alinha o menu à direita */
-    }
-} 
+}

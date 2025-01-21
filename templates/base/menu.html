@@ -1,20 +1,38 @@
 {% load static %}
 <header>
     <nav class="menu">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#home">
+                <img src="{% static 'images/pages/index/logo-azul-cinza.png' %}" alt="Logo">
+            </a>
+        </div>
+
         <!-- Ícone do menu para mobile -->
         <div class="menu-toggle" id="menu-toggle">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <ul id="menu-items">
-            <li><a href="#home"><img src="{% static 'images/pages/index/logo-azul-cinza.png' %}" alt="Logo"></a></li>
-            <li><a href="#home" class="marcus">Quem é Marcus</a></li>
-            <li><a href="#servicos" class="escritorio">Escritório</a></li>
-            <li><a href="#equipe" class="servicos">Serviços</a></li>
-            <li><a href="#contato" class="advogados">Advogados</a></li>
-            <li><a href="#contato" class="fale-conosco">Fale conosco</a></li>
-            <li><a href="#contato" class="onde-nos-achar">Onde nos achar</a></li>
+
+        <!-- Itens do menu -->
+        <ul class="menu-items" id="menu-items">
+            <li><a href="#home">Quem é Marcus</a></li>
+            <li><a href="#escritorio">Escritório</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#advogados">Advogados</a></li>
+            <li><a href="#fale-conosco">Fale conosco</a></li>
+            <li><a href="#onde-nos-achar">Onde nos achar</a></li>
         </ul>
     </nav>
 </header>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuItems = document.getElementById('menu-items');
+
+    menuToggle.addEventListener('click', () => {
+        menuItems.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+</script>

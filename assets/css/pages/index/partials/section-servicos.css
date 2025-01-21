@@ -1,119 +1,201 @@
-/* Seção de serviços */
+/* ========================= */
+/* Seção de Serviços */
+/* ========================= */
 .secao-servicos {
-    background-color: #171D2B;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 60px 20px;
+  background-color: #171D2B;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 60px 20px;
+  position: relative;
 }
 
-/* Título da seção com linha vertical */
+.logo-container {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 433.12px;
+  height: 145px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Estilo do Título de Serviços */
 .titulo-servicos {
-    font-size: 28px;
-    font-weight: bold;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-family: 'Alata', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 48px;
+  margin: 180px 0px 50px 100px; /* margem superior, direita, inferior e esquerda */
 }
 
 .titulo-servicos .linha-vertical {
-    width: 5px;
-    height: 30px;
-    background-color: #CF6C36;
+  width: 2px;
+  height: 30px;
+  background-color: #CF6C36;
 }
 
-/* Container de serviços */
+
 .container-servicos {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch; /* Garante que todos os itens tenham a mesma altura */
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 20px; /* Espaçamento reduzido: 40px entre linhas, 20px entre colunas */
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between; /* Ajusta para manter alinhamento proporcional */
 }
 
-/* Cartões de serviço */
 .caixa-servico {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 240px; /* Largura fixa */
-    height: 300px; /* Altura fixa para uniformizar os cartões */
-    display: flex;
-    flex-direction: column; /* Organiza o conteúdo de cima para baixo */
-    justify-content: space-between; /* Garante espaçamento entre os elementos */
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 20px); /* Cada quadrado ocupa 25% da linha, com espaço entre eles */
+  height: 245px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 30px; /* Ajuste fino para evitar que o círculo toque os cartões acima */
 }
 
 .caixa-servico:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Ícone */
-.icone-container {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 15px;
-    border: 2px solid #CF6C36;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.circulo-icone {
+  width: 78.17px;
+  height: 77px;
+  position: absolute;
+  top: -38px; /* Posiciona o círculo no topo do cartão */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FFFFFF;
+  border: 3px solid #CF6C36;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 
-.icone {
-    max-width: 40px;
-    height: auto;
+
+.circulo-icone img {
+  width: 40px;
+  height: auto;
 }
 
 .titulo-servico {
-    font-size: 18px;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 50px; /* Ajusta para alinhar o texto após o círculo */
+  margin-bottom: 10px;
 }
 
 .descricao-servico {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
 }
 
-/* Botão CTA */
 .botao-cta {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #CF6C36;
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-    margin-top: 30px;
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #CF6C36;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius:10px;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
 }
 
 .botao-cta:hover {
-    background-color: #B9592D;
+  background-color: #B9592D;
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .container-servicos {
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width: 1024px) {
+  .container-servicos {
+    gap: 30px 15px; /* Reduz ligeiramente o espaçamento em telas menores */
+  }
 
-    .caixa-servico {
-        width: 100%;
-        max-width: 400px;
-        height: auto; /* Permite altura variável em telas pequenas */
-    }
+  .caixa-servico {
+    width: calc(33.33% - 20px); /* Três quadrados por linha em tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .container-servicos {
+    gap: 20px 10px; /* Menor espaçamento para telas pequenas */
+  }
+
+  .caixa-servico {
+    width: calc(50% - 15px); /* Dois quadrados por linha em smartphones grandes */
+  }
+
+  /* Responsividade para o título de serviços */
+  .titulo-servicos {
+    font-size: 18px; /* Ajuste o tamanho da fonte para telas menores */
+    width: 73px; /* Largura ajustada */
+    height: 28px; /* Altura ajustada */
+    margin: 90px 0px 30px 20px; /* Ajusta as margens para melhor alinhamento em telas menores */
+  }
+
+  .titulo-servicos .linha-vertical {
+    height: 15px; /* Reduz a altura da linha vertical */
+  }
+}
+
+@media (max-width: 480px) {
+  .caixa-servico {
+    width: 100%; /* Um quadrado por linha em smartphones pequenos */
+    height: auto; /* Altura ajustável em telas menores */
+  }
+
+  /* Responsividade para o título de serviços */
+  .titulo-servicos {
+    font-size: 16px; /* Tamanho da fonte menor em smartphones pequenos */
+    width: 73px;
+    height: 28px;
+    margin: 70px 0px 20px 15px; /* Ajuste fino das margens */
+  }
+
+  .titulo-servicos .linha-vertical {
+    height: 12px; /* Menor altura para linha vertical em telas menores */
+  }
+}
+
+/* Responsividade para a logo */
+@media (max-width: 1024px) {
+  .logo-container {
+    width: 300px; /* Logo menor em telas de tablets */
+    height: auto; /* Ajuste da altura proporcional */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    width: 250px; /* Logo menor em telas menores */
+    height: auto; /* Ajuste da altura proporcional */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    width: 200px; /* Logo menor em smartphones */
+    height: auto; /* Ajuste da altura proporcional */
+  }
 }

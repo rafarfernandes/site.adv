@@ -58,20 +58,25 @@
     height: 246px;
     display: flex;
     flex-direction: column;
+    left: 102px;
     gap: 40px;
 }
 
 .slide-item .text-container .title {
     font-family: 'Barlow', sans-serif;
+    width: 529px;
+    height: 154px;
     font-weight: 400;
     font-size: 64px;
     line-height: 76.8px;
+    text-align: left;
     color: #FFFFFF;
 }
 
 .slide-item .text-container .button {
     width: 294px;
     height: 52px;
+    margin-top: -20px;
     border-radius: 10px;
     padding: 10px;
     background-color: #1160A3;
@@ -130,14 +135,31 @@
     }
 
     .slide-item .text-container .title {
+        width: 177px;
+        height: 114px;
         font-size: 32px;
         line-height: 38.4px;
     }
 
     .slide-item .text-container .button {
-        width: 150px;
-        height: 32px;
-        font-size: 18px;
-        line-height: 22px;
+        width: 177px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+        gap: 8px;
+        margin-top: 40px;
+        font-size: 13px;
+        line-height: 17.94px;
+        background-color: #1160A3; /* Cor de fundo */
+        color: #FFFFFF; /* Cor do texto */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-decoration: none;
+        border: none;
+        white-space: nowrap; /* Garantir que o texto não quebre a linha */
+        text-align: center;  /* Centralizar o texto */
     }
+        
 }
