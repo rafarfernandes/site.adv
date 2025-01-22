@@ -1,58 +1,99 @@
+/* Geral */
 footer {
-    background-color: #1F1F1F; /* Cor do fundo */
-    color: #FFFFFF; /* Cor do texto */
-    padding: 35px 70px; /* Espaçamento superior e lateral */
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between; /* Alinha os elementos lado a lado */
-    align-items: flex-start; /* Alinha ao topo */
-}
-
-.footer-info {
-    width: 361px; /* Largura fixa da seção de texto */
-}
-
-.footer-info h3 {
+    background: linear-gradient(135deg, #1F1F1F, #292929);
+    color: #FFFFFF;
+    padding: 40px 20px;
     font-family: 'Barlow', sans-serif;
-    font-size: 23px;
-    font-weight: 500;
-    line-height: 27.6px;
-    margin-bottom: 12px; /* Espaçamento inferior */
 }
 
-.footer-info p {
-    font-family: 'Barlow', sans-serif;
-    font-size: 23px;
-    font-weight: 500;
-    line-height: 27.6px;
-    margin-bottom: 12px; /* Espaçamento entre as linhas */
+/* Grade principal */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.footer-info p span {
-    font-size: 20px; /* Tamanho dos ícones */
-    margin-right: 10px; /* Espaçamento do ícone */
+@media (max-width: 768px) {
+    .footer-grid {
+        gap: 20px;
+    }
 }
 
-.footer-map {
-    width: 429px; /* Largura fixa do mapa */
-    height: 291.81px; /* Altura fixa */
+/* Bloco Esquerdo: Logo e Descrição */
+.footer-brand img {
+    width: 100px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.footer-brand img:hover {
+    transform: scale(1.1);
+}
+
+.footer-brand p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #CFCFCF;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+/* Bloco Direito: Mapa */
+.footer-map h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #F08441;
+    font-weight: bold;
 }
 
 .footer-map iframe {
-    width: 100%; /* Preenche todo o espaço disponível */
-    height: 100%;
-    border: 0; /* Remove bordas */
-}
-
-.footer-logo {
-    margin-top: 35px; /* Espaço superior */
-    width: 58.63px;
-    height: 63px;
-}
-
-.footer-logo img {
     width: 100%;
-    height: auto;
+    max-width: 400px;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.footer-map .contact-info {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #E0E0E0;
+    margin-top: 10px;
+}
+
+.footer-map .contact-info a {
+    color: #F08441;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-map .contact-info a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #C0C0C0;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom a {
+    color: #F08441;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
 }

@@ -9,7 +9,7 @@
   border-radius: 0px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Textos alinhados à esquerda */
+  align-items: flex-start;
   gap: 40px;
 }
 
@@ -17,7 +17,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px; /* Aumenta o espaço entre os elementos da equipe */
 }
 
 .titulo-barra-equipe {
@@ -31,125 +31,116 @@
   width: 2px;
   height: 50px;
   background-color: #cf6c36;
+  align-self: center; /* Garante que a barra vertical seja centralizada */
 }
 
 .texto-equipe {
-  max-width: 100%; /* Permitir que o conteúdo use toda a largura disponível */
+  max-width: 100%;
   text-align: left;
 }
 
 .texto-equipe h1 {
   font-family: "Alata", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 34.19px;
-  line-height: 47.18px;
+  line-height: 47px;
   color: #201e1e;
-  gap: 12px;
+  margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
+  
 }
 
 .texto-equipe .subtitulo-equipe {
   font-family: "Barlow", sans-serif;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 40px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
   color: #201e1e;
-  margin-top: 15px;
-  text-align: left; /* Alinha o texto à esquerda */
-  white-space: normal; /* Permite quebra de linha automática */
-  word-break: break-word; /* Garante que o texto não saia do contêiner */
-  margin: 0px 0px 0px 60px; /* margem superior, direita, inferior e esquerda */
+  margin: 0px 0px 20px 60px; /* Ajusta a margem inferior para espaçamento adequado */
 }
+
 
 /* Configuração para as linhas */
 .linha-conteudo {
   width: 100%;
   max-width: 1440px;
   display: flex;
-  justify-content: center; /* Centraliza os itens horizontalmente */
-  align-items: center; /* Centraliza os itens verticalmente */
-  gap: 40px; /* Aumenta o espaçamento entre os itens (imagem e retângulo) */
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   padding: 30px;
+  position: relative;
 }
 
 /* Estilo da imagem da equipe */
 .imagem-equipe {
   width: 321px;
   height: 398px;
-  background-color: #07233b; /* Cor de fundo */
-  border-radius: 8px; /* Bordas arredondadas */
-  border: 4px solid #07233b; /* Borda da imagem */
-  overflow: hidden; /* Impede que a imagem saia da borda arredondada */
+  background-color: #07233b;
+  border-radius: 8px;
+  border: 4px solid #07233b;
+  overflow: hidden;
   display: flex;
-  justify-content: center; /* Centraliza a imagem horizontalmente */
-  align-items: center; /* Centraliza a imagem verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
-/* Ajuste da imagem para cobrir toda a área do container */
 .imagem-ajustada {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz com que a imagem cubra completamente a área, mantendo a proporção */
+  object-fit: cover;
 }
 
-/* Estilo do retângulo onde fica o conteúdo */
+/* Estilo do retângulo */
 .retangulo-equipe {
-  width: 847px; /* Largura do retângulo */
-  height: 398px; /* Altura do retângulo */
-  background-color: transparent; /* Torna o fundo transparente */
-  border-radius: 8px; /* Bordas arredondadas */
-  border: 4px solid #07233b; /* Borda do retângulo */
+  width: 847px;
+  height: 398px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 4px solid #07233b;
   display: flex;
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  padding: 15px; /* Espaçamento interno para o conteúdo */
-  flex-direction: column; /* Empilha o conteúdo verticalmente */
-  justify-content: center; /* Centraliza o conteúdo dentro do retângulo */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
-/* Estilo da lista dentro do retângulo */
 .lista-retangulo {
-  color: #201e1e; /* Cor do texto */
-  width: 747px; /* Largura da lista */
-  height: auto; /* Deixa a altura da lista flexível */
-  font-family: "Barlow", sans-serif; /* Fonte utilizada */
-  font-weight: 400; /* Peso da fonte */
-  font-size: 23px; /* Tamanho da fonte */
-  line-height: 27.6px; /* Altura entre as linhas de texto */
-  margin: 0; /* Remove margens extras */
-  list-style-type: disc; /* Estilo de lista com marcadores */
-  padding-left: 20px; /* Espaçamento para os marcadores */
+  color: #201e1e;
+  width: 747px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 27.6px;
+  margin: 0;
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
-/* Ícone ao lado direito */
+/* Ícone à direita */
 .icone-equipe {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  width: 50px; /* Tamanho controlado */
-  height: 50px; /* Tamanho controlado */
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Ícone ao lado esquerdo */
+/* Ícone à esquerda */
 .icone-equipe-esquerda {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  width: 20px; /* Mesma largura que o ícone direito */
-  height: 20px; /* Mesma altura que o ícone direito */
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Ajuste da imagem dentro do ícone */
 .icone-ajustado {
-  width: 100%; /* Ocupa toda a largura do container */
-  height: auto; /* Mantém a proporção da imagem */
-}
-
-/* Para garantir que o container do grupo tenha um position relativo */
-.linha-conteudo {
-  position: relative; /* Necessário para que o ícone seja posicionado em relação ao grupo */
+  width: 100%;
+  height: auto;
 }
 
 /* Animação de fade-in */
@@ -168,11 +159,11 @@
   }
 }
 
-/* Efeito de hover elegante nos ícones */
+/* Hover nos ícones */
 .icone-equipe:hover,
 .icone-equipe-esquerda:hover {
-  transform: scale(1.1); /* Aumenta levemente o tamanho */
-  opacity: 0.9; /* Torna o ícone ligeiramente translúcido */
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 /* Responsividade */
@@ -180,7 +171,7 @@
   .linha-conteudo {
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Reduz o espaço entre os itens */
+    gap: 20px;
   }
 
   .imagem-equipe,
@@ -196,13 +187,13 @@
   }
 
   .lista-retangulo {
-    width: 90%; /* Reduz a largura para caber melhor em telas menores */
+    width: 90%;
   }
 }
 
 @media (max-width: 768px) {
   .linha-conteudo {
-    gap: 15px; /* Reduz ainda mais o espaço entre os itens */
+    gap: 15px;
   }
 
   .imagem-equipe {
@@ -215,19 +206,25 @@
     height: auto;
   }
 
+  .barra-vertical-equipe {
+    margin-left: -20px;
+    
+  }
+
   .texto-equipe h1 {
-    font-size: 24px;
-    line-height: 34px;
+    width: 400px;
+    font-size: 20px;
+    line-height: 27.6px;
+    
   }
 
   .texto-equipe .subtitulo-equipe {
-    font-size: 16px;
-    line-height: 22px;
+    display: none;
   }
 
   .lista-retangulo {
     width: 100%;
-    padding: 10px; /* Ajusta o padding para telas menores */
+    padding: 10px;
   }
 }
 
@@ -247,11 +244,6 @@
   .texto-equipe h1 {
     font-size: 20px;
     line-height: 30px;
-  }
-
-  .texto-equipe .subtitulo-equipe {
-    font-size: 14px;
-    line-height: 20px;
   }
 
   .lista-retangulo {

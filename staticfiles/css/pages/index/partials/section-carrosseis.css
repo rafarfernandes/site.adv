@@ -1,25 +1,149 @@
-/* Carrosséis */
-.carrosseis {
-    padding: 2rem;
-    background-color: #fff;
+/* Seção Principal */
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f4f4f4, #eaeaea);
+  width: 100%;
 }
 
-.carrossel {
-    margin-bottom: 2rem;
+/* Container Principal */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
-.carrossel-container {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    padding: 1rem 0;
+/* Texto */
+.text-container {
+  max-width: 550px;
+  flex: 1;
 }
 
-.carrossel-item {
-    flex: 0 0 200px;
-    background: #eee;
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.name-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-family: 'Alata', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #201e1e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-bar {
+  width: 2px;
+  height: 50px;
+  background-color: #cf6c36;
+  border-radius: 5px;
+}
+
+.description {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #505050;
+  margin-top: 10px;
+}
+
+/* Botão de chamada para ação */
+.call-to-action {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(135deg, #cf6c36, #d97742);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.call-to-action:hover {
+  background: linear-gradient(135deg, #a55028, #bf4e2d);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Carrossel Container */
+.carousel-container {
+  width: 100%; /* Ajusta a largura para ocupar o espaço disponível */
+  max-width: 580px; /* Define um limite máximo */
+  height: auto;
+  aspect-ratio: 16 / 9; /* Define proporções para manter o contêiner responsivo */
+  position: relative;
+  background: #07233b;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Carrossel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  width: 100%;
+}
+
+/* Imagem */
+.carousel-image {
+  flex: 0 0 100%; /* Cada imagem ocupa 100% do contêiner */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+  transition: transform 0.5s ease-in-out, filter 0.3s ease;
+  filter: brightness(0.95); /* Diminui ligeiramente o brilho para maior contraste */
+}
+
+.carousel-image:hover {
+  transform: scale(1.05); /* Aumenta ligeiramente o zoom no hover */
+  filter: brightness(1); /* Aumenta o brilho */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    max-width: 100%; /* Remove o limite para telas pequenas */
+    aspect-ratio: 4 / 3; /* Ajusta proporção para telas menores */
+  }
+
+  .carousel-image {
+    object-fit: contain; /* Ajusta para mostrar a imagem completa sem cortes */
+  }
+
+  .text-container {
+    max-width: 100%;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .call-to-action {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
 }

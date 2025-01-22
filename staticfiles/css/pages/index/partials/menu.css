@@ -1,67 +1,148 @@
-header {
-    background: #FFFFFF; /* Fundo branco para o header */
-    padding: 1rem 0;
-    text-align: center;
-    width: 1440px; /* Largura fixa */
-    height: 73px; /* Altura fixa */
-    margin-bottom: 0; /* Remove o espaço abaixo do header */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header .menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 109px; /* Espaçamento */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-}
-
-header .menu ul li a {
-    text-decoration: none;
+body {
     font-family: 'Alata', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22.08px;
-    color: var(--cor-texto); /* Cor do texto */
-    background: transparent; /* Fundo transparente para evitar o cinza */
+    line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-/* Remove qualquer estilo de hover indesejado */
-header .menu ul li a:hover {
-    background: transparent; /* Garante que o hover não adicione fundo */
+/* Estilo do cabeçalho */
+header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Configurações específicas para cada item do menu */
-header .menu ul li a.marcus {
-    width: 114px; /* Tamanho específico para "Quem é Marcus" */
-    height: 22px;
-    gap: 10px; /* Espaçamento específico */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinhado mais à esquerda */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    gap: 3rem; /* Maior espaçamento entre logo e itens */
 }
 
-header .menu ul li a.escritorio {
-    width: 65px; /* Tamanho específico para "Escritório" */
-    height: 22px;
+/* Logo */
+.logo img {
+    height: 45px;
+    transition: transform 0.3s ease;
 }
 
-header .menu ul li a.servicos {
-    width: 58px; /* Tamanho específico para "Serviços" */
-    height: 22px;
+.logo img:hover {
+    transform: scale(1.1);
 }
 
-header .menu ul li a.advogados {
-    width: 83px; /* Tamanho específico para "Advogados" */
-    height: 22px;
+/* Itens do menu */
+.menu-items {
+    display: flex;
+    gap: 2rem; /* Espaçamento aumentado entre os itens */
+    list-style: none;
 }
 
-header .menu ul li a.fale-conosco {
-    width: 90px; /* Tamanho específico para "Fale Conosco" */
-    height: 22px;
+.menu-items li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-header .menu ul li a.onde-nos-achar {
-    width: 115px; /* Tamanho específico para "Onde nos achar" */
-    height: 22px;
+.menu-items li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #201E1E;
+    padding: 0.6rem 1rem; /* Maior espaçamento interno */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-header .menu ul li a img {
-    height: 40px; /* Ajuste a altura conforme necessário */
+.menu-items li a:hover {
+    background-color: #201E1E;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Ícone do menu para mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Menu responsivo */
+@media (max-width: 768px) {
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: max-height 0.3s ease;
+        overflow: hidden;
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    .menu-items li {
+        text-align: center;
+    }
+
+    .menu-items li a {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Menu para telas muito pequenas */
+@media (max-width: 480px) {
+    .menu {
+        padding: 0.8rem 1rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .menu-items li a {
+        font-size: 0.9rem;
+    }
 }

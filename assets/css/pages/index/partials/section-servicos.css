@@ -167,14 +167,14 @@
 
   /* Responsividade para o título de serviços */
   .titulo-servicos {
-    font-size: 16px; /* Tamanho da fonte menor em smartphones pequenos */
+    font-size: 17px; /* Tamanho da fonte menor em smartphones pequenos */
     width: 73px;
     height: 28px;
-    margin: 70px 0px 20px 15px; /* Ajuste fino das margens */
+    margin: 70px 0px 20px 10px; /* Ajuste fino das margens */
   }
 
   .titulo-servicos .linha-vertical {
-    height: 12px; /* Menor altura para linha vertical em telas menores */
+    height: 44px; /* Menor altura para linha vertical em telas menores */
   }
 }
 

@@ -1,15 +1,15 @@
-/* Seção Principal */
-.profile-section {
+/* Seção do Perfil */
+.secao-perfil {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 80px 20px;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #f4f4f4, #eaeaea);
   width: 100%;
 }
 
 /* Container Principal */
-.content-wrapper {
+.container-principal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,126 +20,126 @@
   flex-wrap: wrap;
 }
 
-/* Texto */
-.text-container {
+/* Container de Texto */
+.container-texto {
   max-width: 550px;
   flex: 1;
 }
 
-.name-container {
+/* Container de Nome */
+.container-nome {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.name {
+/* Nome */
+.nome {
   font-family: 'Alata', sans-serif;
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 34px;
+  font-weight: 400;
   color: #201e1e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.vertical-bar {
+/* Barra Vertical */
+.barra-vertical {
   width: 2px;
   height: 50px;
   background-color: #cf6c36;
-}
-
-
-.description {
-  font-family: 'Barlow', sans-serif;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #505050;
-  margin-top: 10px;
-}
-
-/* Botão de chamada para ação */
-.call-to-action {
-  margin-top: 30px;
-  padding: 15px 30px;
-  font-size: 18px;
-  color: #fff;
-  background-color: #cf6c36;
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.call-to-action:hover {
-  background-color: #a55028;
+/* Descrição */
+.descricao {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px; /* Mantive o tamanho de fonte confortável */
+  line-height: 1.4; /* Reduzi um pouco o espaçamento entre as linhas para evitar grandes espaços */
+  color: #333333; /* Cor mais suave e escura */
+  margin-top: 15px; /* Distância do topo */
+  margin-bottom: 20px; /* Distância inferior */
+  text-align: left; /* Justifica o texto */
+  letter-spacing: 0.5px; /* Pequeno espaçamento entre as letras */
+  word-wrap: break-word; /* Permite quebra de palavras longas para evitar linhas muito grandes */
 }
 
-/* Carrossel Container */
-.carousel-container {
-  width: 100%; /* Ajusta a largura para ocupar o espaço disponível */
-  max-width: 580px; /* Define um limite máximo */
+
+
+
+/* Container do Carrossel */
+.container-carrossel {
+  width: 100%;
+  max-width: 580px;
   height: auto;
-  aspect-ratio: 16 / 9; /* Define proporções para manter o contêiner responsivo */
+  aspect-ratio: 16 / 9; /* Mantém a proporção do carrossel */
   position: relative;
-  background-color: #07233b;
+  background: #07233b;
   overflow: hidden;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Carrossel */
-.carousel {
+.carrossel {
   display: flex;
   transition: transform 0.5s ease-in-out;
   position: relative;
   width: 100%;
 }
 
-/* Imagem */
-.carousel-image {
-  flex: 0 0 100%; /* Cada imagem ocupa 100% do contêiner */
+/* Imagem do Carrossel */
+.imagem-carrossel {
+  flex: 0 0 100%; /* A imagem ocupa toda a largura do contêiner */
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, filter 0.3s ease;
+  filter: brightness(0.95); /* Diminui o brilho da imagem */
 }
 
-/* Evita que múltiplas imagens fiquem visíveis */
-.carousel-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.imagem-carrossel:hover {
+  transform: scale(1.05); /* Aumenta o zoom ao passar o mouse */
+  filter: brightness(1); /* Restaura o brilho */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .content-wrapper {
+  .container-principal {
     flex-direction: column;
     gap: 30px;
   }
 
-  .carousel-container {
+  .container-carrossel {
     width: 100%;
-    max-width: 100%; /* Remove o limite para telas pequenas */
-    aspect-ratio: 4 / 3; /* Ajusta proporção para telas menores */
+    max-width: 100%;
+    aspect-ratio: 4 / 3; /* Ajusta a proporção para telas menores */
   }
 
-  .carousel-image {
-    object-fit: contain; /* Ajusta para mostrar a imagem completa sem cortes */
+  .imagem-carrossel {
+    width: 100%; /* A imagem ocupa toda a largura do contêiner */
+    height: 100%; /* A imagem ocupa toda a altura do contêiner */
+    object-fit: cover; /* A imagem cobre todo o espaço do contêiner */
   }
 
-  .text-container {
+  .container-texto {
     max-width: 100%;
   }
 
-  .name {
+  .nome {
     font-size: 32px;
   }
 
-  .description {
-    font-size: 16px;
+  .descricao {
+    font-size: 16px; /* Ajusta o tamanho da fonte em telas pequenas */
+    line-height: 1.3; /* Reduzi o espaçamento entre as linhas */
+    margin-top: 10px; /* Ajusta o espaçamento superior para telas pequenas */
+    margin-bottom: 15px; /* Ajusta o espaçamento inferior para não ficar tão afastado */
   }
-
-  .call-to-action {
-    font-size: 16px;
-    padding: 12px 25px;
+  
+  /* Ajusta o espaçamento entre parágrafos no mobile */
+  .descricao p {
+    margin-bottom: 5px; /* Menor espaçamento entre os parágrafos */
   }
 }

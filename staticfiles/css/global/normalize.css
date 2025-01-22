@@ -1,5 +1,12 @@
-* {
-    padding: 0;
-    border: none;
+/* Impede a rolagem horizontal */
+body, html {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Caso o problema persista, você pode tentar corrigir elementos específicos com larguras erradas */
+* {
+    box-sizing: border-box;
 }

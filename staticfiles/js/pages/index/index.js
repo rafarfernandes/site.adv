@@ -1,3 +1,15 @@
+// Seleciona o botão de toggle e o menu
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menuItems = document.getElementById('menu-items');
+    menuItems.classList.toggle('show');
+});
+
+// Alterna a exibição do menu ao clicar no ícone
+menuToggle.addEventListener('click', () => {
+    menuItems.classList.toggle('show');
+});
+
+
 // Slide
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide-item');
@@ -17,37 +29,87 @@ document.querySelector('.next').addEventListener('click', () => {
 });
 
 // Carrosséis
-function setupCarrossel(carrosselSelector) {
-    const carrossel = document.querySelector(carrosselSelector);
-    const container = carrossel.querySelector('.carrossel-container');
-    const items = carrossel.querySelectorAll('.carrossel-item');
 
-    let isDragging = false;
-    let startX;
-    let scrollLeft;
 
-    container.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.pageX - container.offsetLeft;
-        scrollLeft = container.scrollLeft;
+
+
+
+//Equipe 
+document.addEventListener("DOMContentLoaded", () => {
+    const photo = document.querySelector(".team-photo img");
+
+    photo.addEventListener("mouseover", () => {
+      photo.style.filter = "grayscale(50%)";
     });
 
-    container.addEventListener('mouseleave', () => {
-        isDragging = false;
+    photo.addEventListener("mouseout", () => {
+      photo.style.filter = "grayscale(0%)";
+    });
+  });
+
+
+
+
+  
+
+//forms
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const fields = ["name", "phone", "email", "subject", "message"];
+    let isValid = true;
+
+    fields.forEach((field) => {
+        const input = document.getElementById(field);
+        if (!input.value.trim()) {
+            showError(input, "Este campo é obrigatório.");
+            isValid = false;
+        } else if (field === "email" && !validateEmail(input.value)) {
+            showError(input, "Digite um e-mail válido.");
+            isValid = false;
+        } else {
+            showSuccess(input);
+        }
     });
 
-    container.addEventListener('mouseup', () => {
-        isDragging = false;
-    });
+    if (isValid) {
+        alert("Formulário enviado com sucesso!");
+        form.reset(); // Opcional: limpa o formulário após o envio
+    }
+});
 
-    container.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX) * 2; // Scroll speed
-        container.scrollLeft = scrollLeft - walk;
-    });
+// Função para exibir erro
+function showError(input, message) {
+    input.classList.add("error");
+    input.classList.remove("success");
+
+    let errorElement = input.nextElementSibling;
+    if (!errorElement || !errorElement.classList.contains("error-message")) {
+        errorElement = document.createElement("span");
+        errorElement.classList.add("error-message");
+        errorElement.style.color = "#FF4D4D";
+        errorElement.style.fontSize = "0.8rem";
+        errorElement.style.marginTop = "5px";
+        errorElement.style.display = "block";
+        input.after(errorElement);
+    }
+    errorElement.textContent = message;
 }
 
-setupCarrossel('.carrossel');
-setupCarrossel('.carrossel-equipe');
+// Função para exibir sucesso
+function showSuccess(input) {
+    input.classList.add("success");
+    input.classList.remove("error");
+
+    const errorElement = input.nextElementSibling;
+    if (errorElement && errorElement.classList.contains("error-message")) {
+        errorElement.remove();
+    }
+}
+
+// Validação simples de e-mail
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}

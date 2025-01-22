@@ -1,183 +1,254 @@
 /* ------------------------
-   Base Styles
------------------------- */
-body {
-    font-family: 'Barlow', sans-serif;
-    background-color: #171D2B;
-    color: #FFF;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-/* ------------------------
-   Contact Section
+   Seção de Contato
 ------------------------ */
 .contact-section {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
-    gap: 30px;
+  font-family: 'Barlow', sans-serif;
+  background-color: #171D2B;
+  color: #FFF;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 90px 70px; /* Ajuste no espaçamento superior para elevar os textos */
+  gap: 12px;
+  width: 100%; /* Full width */
 }
 
 .contact-left {
-    flex: 1 1 45%;
-    max-width: 500px;
+  flex: 1 1 361px; /* Ajuste para permitir flexibilidade no tamanho */
+  max-width: 361px;
+  margin-top: 50px; /* Ajuste para centralizar melhor o conteúdo */
 }
 
 .contact-left h2 {
-    font-family: 'Alata', sans-serif;
-    font-size: 2.5rem;
-    color: #CF6C36;
-    margin-bottom: 10px;
-    position: relative; /* Necessário para a linha decorativa */
-    padding-left: 20px; /* Espaçamento para a linha */
+  font-family: 'Alata', sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 46.92px;
+  text-align: left;
+  margin-bottom: 15px;
+  position: relative; /* Garantir que a linha apareça ao lado esquerdo */
 }
 
 .contact-left h2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px; /* Espessura da linha */
-    height: 100%; /* Altura igual ao texto do título */
-    background-color: #CF6C36; /* Cor da linha */
-    border-radius: 2px; /* Bordas arredondadas */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px; /* Ajuste a posição da linha para alinhá-la com o título */
+  width: 4px; /* Espessura da linha */
+  height: 100%; /* Altura igual ao texto do título */
+  background-color: #CF6C36; /* Cor da linha */
+  border-radius: 2px; /* Bordas arredondadas */
 }
 
 .contact-left h3 {
-    font-size: 1.8rem;
-    color: #FFF;
-    margin-bottom: 15px;
+  font-size: 34px;
+  line-height: 46.92px;
+  margin-bottom: 15px;
 }
 
 .contact-left p {
-    font-size: 1rem;
-    color: #D3D3D3;
+  font-family: 'Barlow', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  color: #FFFFFF;
+  max-width: 510px; /* Garantindo a largura */
+  margin-top: 10px; /* Ajuste para subir o texto */
 }
 
 .contact-right {
-    flex: 1 1 50%;
-    max-width: 600px;
-    background-color: #FFF;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 640px; /* Ajuste para tornar flexível */
+  max-width: 640px;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ------------------------
-   Form Styles
+   Formulário
 ------------------------ */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form-row {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group {
-    flex: 1;
+  flex: 1;
 }
 
 label {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333A4D;
-    display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333A4D;
+  display: block;
 }
 
 input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #CF6C36;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #171D2B;
-    background-color: #F8F8F8;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #CF6C36;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #171D2B;
+  background-color: #F8F8F8;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: #CF6C36;
-    box-shadow: 0 0 5px rgba(207, 108, 54, 0.5);
-    outline: none;
+  border-color: #CF6C36;
+  box-shadow: 0 0 5px rgba(207, 108, 54, 0.5);
+  outline: none;
 }
 
 textarea {
-    resize: none;
-    height: 100px;
+  resize: none;
+  height: 100px;
 }
 
+/* Estilos para o link do botão */
+.button-link {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: #CF6C36;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center; /* Centraliza o texto no link */
+  text-decoration: none; /* Remove o sublinhado do link */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #A8532B;
+  transform: scale(1.02);
+}
+
+
 button {
-    width: 100%;
-    padding: 12px;
-    background-color: #CF6C36;
-    border: none;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  padding: 12px;
+  background-color: #CF6C36;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #A8532B;
-    transform: scale(1.02);
+  background-color: #A8532B;
+  transform: scale(1.02);
 }
 
 /* ------------------------
-   Responsiveness
+   Responsividade
 ------------------------ */
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 90px 30px; /* Menos padding lateral para telas médias */
+  }
+
+  .contact-left, 
+  .contact-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .contact-left h2 {
+    font-size: 28px; /* Reduzindo o tamanho da fonte do título */
+  }
+
+  .contact-left h3 {
+    font-size: 28px; /* Ajuste na fonte */
+  }
+
+  .contact-left p {
+    font-size: 20px; /* Ajuste no tamanho da fonte */
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  button {
+    width: auto;
+    margin: 20px auto;
+  }
+}
+
 @media (max-width: 768px) {
-    .contact-left, 
-    .contact-right {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
+  .contact-section {
+    padding: 60px 20px; /* Ajuste ainda maior do padding para telas pequenas */
+  }
 
-    .form-row {
-        flex-direction: column;
-    }
+  .contact-left h2 {
+    font-size: 24px; /* Fontes ainda menores em telas pequenas */
+  }
 
-    button {
-        width: auto;
-        margin: 20px auto;
-    }
+  .contact-left h3 {
+    font-size: 24px;
+  }
+
+  .contact-left p {
+    font-size: 18px;
+    max-width: 100%; /* Garantir que o texto ocupe toda a largura */
+  }
+
+  .contact-right {
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px; /* Menor espaçamento entre os campos do formulário */
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
 
 /* ------------------------
-   Additional Utility Styles
+   Utilitários Adicionais
 ------------------------ */
 hr {
-    border: none;
-    border-top: 1px solid #333A4D;
-    margin: 20px 0;
+  border: none;
+  border-top: 1px solid #333A4D;
+  margin: 20px 0;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .mt-10 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .mb-10 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .p-20 {
-    padding: 20px;
+  padding: 20px;
 }
-

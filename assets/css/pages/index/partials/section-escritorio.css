@@ -1,127 +1,128 @@
 /* ========================= */
 /* Estilos Gerais */
 /* ========================= */
-body {
+.secao-advocacia {
   font-family: 'Barlow', sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 40px 20px; /* Reduzido para menos espaçamento */
   box-sizing: border-box;
-  background-color: #F8F8F8;
-}
-
-/* ========================= */
-/* Seção Principal */
-/* ========================= */
-.secao-advocacia {
+  background: linear-gradient(180deg, #f8f8f8, #eaeaea);
+  color: #201e1e;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  background-color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* ========================= */
+/* Container Principal */
+/* ========================= */
 .conteudo-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px; /* Reduzido para menos espaçamento */
   flex-wrap: wrap;
-  gap: 40px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-
-
 /* ========================= */
-/* Títulos com Barra */
+/* Texto */
 /* ========================= */
-.titulo-com-barra {
+/* Container de Texto */
+.texto-container {
+  flex: 1;
+  max-width: 550px;
+}
+
+/* Título Container */
+.titulo-container {
   display: flex;
   align-items: center;
-  gap: 15px; /* Espaço entre a barra e o texto */
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
+/* Barra Vertical */
 .barra-vertical {
   width: 2px;
   height: 50px;
-  background-color: #cf6c36; /* Cor da barra */
+  background-color: #cf6c36;
+  border-radius: 5px;
 }
 
-/* ========================= */
-/* Texto na Seção de Advocacia */
-/* ========================= */
-.texto-conteudo {
-  max-width: 600px;
-  text-align: left;
-}
-
-.texto-conteudo h1 {
+/* Título */
+.titulo {
   font-family: 'Alata', sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
-  color: #201E1E;
+  font-size: 34px;
+  font-weight: 400;
+  color: #201e1e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.texto-conteudo .subtitulo {
+/* Subtítulo */
+.subtitulo {
   font-family: 'Barlow', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: #201E1E;
-  margin-top: 15px;
-}
-
-.texto-conteudo .descricao {
-  font-family: 'Barlow', sans-serif;
-  font-weight: 400;
   font-size: 18px;
-  line-height: 28px;
-  color: #505050;
-  margin-top: 20px;
+  line-height: 1.4;
+  color: #333333;
+  margin-top: 15px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
 }
 
+/* Descrição */
+.descricao {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333333;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
+}
 
 /* ========================= */
-/* Imagem Responsiva */
+/* Imagem */
 /* ========================= */
-.imagem-container {
-  width: 100%;
+.imagem-wrapper {
+  flex: 1;
   max-width: 600px;
-  aspect-ratio: 16 / 9;
-  background-color: #07233B;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.imagem-container img {
+.imagem-escritorio {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagem-escritorio:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* ========================= */
-/* Seção de Estatísticas */
+/* Estatísticas */
 /* ========================= */
 .estatisticas-container {
-  width: 100%;
-  max-width: 1308px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #FFFFFF;
-  border: 4px solid #1160A3;
+  background: #f4f4f4;
+  border: 4px solid #1160a3;
   border-radius: 15px;
-  padding: 20px 40px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 30px auto 0; /* Reduzido para menos espaçamento */
+  gap: 20px; /* Reduzido para menos espaçamento */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .estatistica-item {
@@ -129,54 +130,78 @@ body {
   flex: 1;
 }
 
-.estatistica-item h2 {
+.estatistica-numero {
   font-family: 'Alata', sans-serif;
-  font-weight: 700;
   font-size: 28px;
-  line-height: 38px;
-  color: #201E1E;
+  font-weight: 700;
+  color: #000;
   margin-bottom: 10px;
 }
 
-.estatistica-item p {
+.estatistica-descricao {
   font-family: 'Alata', sans-serif;
-  font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
-  color: #201E1E;
+  font-weight: 400;
+  color: #201e1e;
 }
 
 /* ========================= */
 /* Responsividade */
 /* ========================= */
-@media (max-width: 1024px) {
+
+/* Tablets */
+@media (max-width: 768px) {
   .conteudo-container {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
-  .imagem-container {
-    width: 100%;
+  .imagem-wrapper {
+    display: none;
   }
 
   .estatisticas-container {
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
     padding: 20px;
-    gap: 20px;
+  }
+
+  .titulo {
+    font-size: 28px;
+    width: 100%; /* Ajustado para caber na tela */
+  }
+
+  .subtitulo,
+  .descricao {
+    font-size: 16px;
   }
 }
 
-@media (max-width: 768px) {
-  .texto-conteudo h1 {
-    font-size: 28px;
-    line-height: 38px;
-  }
-
-  .estatistica-item h2 {
+/* Mobile */
+@media (max-width: 480px) {
+  .titulo {
     font-size: 24px;
   }
 
-  .estatistica-item p {
-    font-size: 16px;
+  .subtitulo {
+    font-size: 14px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+
+  .estatistica-numero {
+    font-size: 20px;
+  }
+
+  .estatistica-descricao {
+    font-size: 14px;
+  }
+
+  .estatisticas-container {
+    padding: 10px 15px; /* Reduzido para menos espaçamento */
+    gap: 10px;
   }
 }

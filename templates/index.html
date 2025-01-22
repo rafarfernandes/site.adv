@@ -27,35 +27,34 @@
     </div>
 </section>
 
-<!-- Carrossel -->
-<section class="profile-section">
-  <div class="content-wrapper">
+<!-- Seção do Perfil -->
+<section id="marcus" class="secao-perfil">
+  <div class="container-principal">
     <!-- Texto -->
-    <div class="text-container">
-      <div class="name-container">
-        <div class="vertical-bar"></div>
-        <span class="name">Marcus Salgado</span>
-      </div>
-      <p class="description">
+    <div class="container-texto">
+      <div class="container-nome">
+        <div class="barra-vertical"></div>
+        <span class="nome">Marcus Salgado</span>
+      </div><br>
+      <p class="descricao">
         Possui mais de 15 anos de atuação na assessoria Gestão Pública Municipalista, tendo ocupado posições estratégicas, como Procurador-Geral, Controlador-Geral e Secretário de Planejamento.
-        <br />
-        Além disso, tem vasta experiência na assessoria de municípios e câmaras municipais, contribuindo significativamente para a administração.
-        <br />
-        Sua trajetória é marcada pela excelência, sendo amplamente reconhecida, referendando-o como um dos advogados mais proeminentes em sua área de atuação da nova geração.
       </p>
+      <p class="descricao">
+        Além disso, tem vasta experiência na assessoria de municípios e câmaras municipais, contribuindo significativamente para a administração.
+      </p>
+      <p class="descricao">
+        Sua trajetória é marcada pela excelência, sendo amplamente reconhecida, referendando-o como um dos advogados mais proeminentes em sua área de atuação da nova geração.
+      </p>      
     </div>
 
     <!-- Carrossel de imagens -->
-    <div class="carousel-container">
-      <div class="carousel">
-        <img src="{% static 'images/pages/index/principal_marcus.jpg' %}" alt="Foto 1" class="carousel-image" />
-        <img src="{% static 'images/pages/index/foto2-marcus.jpg' %}" alt="Foto 2" class="carousel-image" />
-        <img src="{% static 'images/pages/index/foto1-marcus.jpg' %}" alt="Foto 3" class="carousel-image" />
+    <div class="container-carrossel">
+      <div class="carrossel">
+        <img src="{% static 'images/pages/index/principal_marcus.jpg' %}" alt="Foto 1" class="imagem-carrossel" />
       </div>
     </div>
   </div>
 </section>
-
 <script>
   const carousel = document.querySelector('.carousel');
   const images = document.querySelectorAll('.carousel-image');
@@ -80,18 +79,24 @@
 
 
 
-
-<!-- Escritório de advocacia -->
-<section class="secao-advocacia">
+<!-- Escritório de Advocacia -->
+<section id="escritorio" class="secao-advocacia">
+  <!-- Conteúdo Principal -->
   <div class="conteudo-container">
-    <div class="texto-conteudo">
-      <div class="titulo-com-barra">
+    <!-- Texto -->
+    <div class="texto-container">
+      <!-- Título -->
+      <div class="titulo-container">
         <div class="barra-vertical"></div>
-        <h1>Escritório de Advocacia</h1>
-      </div>
+        <h1 class="titulo">Escritório de Advocacia</h1>
+      </div><br>
+      
+      <!-- Subtítulo -->
       <p class="subtitulo">
         Especializados em Direito Público e Administrativo, oferecemos soluções jurídicas de excelência.
       </p>
+
+      <!-- Descrição -->
       <p class="descricao">
         Com vasta experiência em convênios, contratos, processos licitatórios, processos administrativos,
         assessoria jurídica e procedimentos correlatos, unimos conhecimento técnico e um relacionamento de
@@ -99,23 +104,29 @@
       </p>
     </div>
 
-    <div class="imagem-container">
-      <img src="{% static 'images/pages/index/escritorioadv.jpg' %}" alt="Escritório de Advocacia" class="carousel-image" />
+    <!-- Imagem -->
+    <div class="imagem-wrapper">
+      <img 
+        src="{% static 'images/pages/index/escritorioadv.jpg' %}" 
+        alt="Escritório de Advocacia" 
+        class="imagem-escritorio" 
+      />
     </div>
   </div>
 
+  <!-- Estatísticas -->
   <div class="estatisticas-container">
     <div class="estatistica-item">
-      <h2>+ de 7000</h2>
-      <p>Consultorias Aplicadas</p>
+      <h2 class="estatistica-numero">+ de 7000</h2>
+      <p class="estatistica-descricao">Consultorias Aplicadas</p>
     </div>
     <div class="estatistica-item">
-      <h2>96%</h2>
-      <p>Casos de Sucesso</p>
+      <h2 class="estatistica-numero">96%</h2>
+      <p class="estatistica-descricao">Casos de Sucesso</p>
     </div>
     <div class="estatistica-item">
-      <h2>R$ 100 M</h2>
-      <p>Custos Recuperados para Clientes</p>
+      <h2 class="estatistica-numero">R$ 100 M</h2>
+      <p class="estatistica-descricao">Custos Recuperados para Clientes</p>
     </div>
   </div>
 </section>
@@ -126,8 +137,9 @@
 
 
 
+
 <!-- Serviços -->
-<section class="secao-servicos">
+<section id="servicos" class="secao-servicos">
   <div class="logo-container">
     <img src="{% static 'images/pages/index/marca-dagua-branca.png' %}" alt="Logo" class="logo" />
   </div>
@@ -210,30 +222,28 @@
       <p class="descricao-servico">Assistência em divórcios, guarda, pensão e demais questões familiares.</p>
     </div>
   </div>
-  <a href="#" class="botao-cta">Quero uma assessoria</a>
+  <a href="https://w.app/MarcusSalgadoAssessoriaJurdica" class="botao-cta">Quero uma assessoria</a>
 </section>
 
 
 
 
 
-
-
 <!-- Equipe -->
-<section class="secao-equipe">
+<section id="equipe" class="secao-equipe">
   <div class="conteudo-equipe" id="section-1">
     <div class="texto-equipe">
       <div class="titulo-barra-equipe">
         <div class="barra-vertical-equipe"></div>
         <h1>Conheça nossa equipe</h1>
-      </div>
+      </div><br>
       <p class="subtitulo-equipe">
         Optar pelo Marcus Salgado Advogados Associados é escolher
         <strong>ética, eficiência e resultados,</strong> com atendimento
         humanizado, transparente e focado na confiança, garantindo
         segurança jurídica e excelência na defesa de seus interesses.
       </p>
-    </div>
+    </div><br>
     <div class="linha-conteudo">
       <div class="imagem-equipe">
         <img
@@ -244,14 +254,12 @@
       </div>
       <div class="retangulo-equipe">
         <ul class="lista-retangulo">
-          <li>Dr. Marcus Salgado (OAB/MA 0.000)</li>
-          <br />
+          <li>Dr. Marcus Salgado </li>
           <li>
             Possui mais de 15 anos de experiência na área de Gestão Pública
             Municipal, ocupando posições estratégicas como Procurador-Geral,
             Controlador-Geral e Secretário de Planejamento.
           </li>
-          <br />
           <li>
             Atua amplamente na assessoria a municípios e câmaras municipais,
             oferecendo contribuições significativas para a eficiência e
@@ -259,232 +267,190 @@
           </li>
         </ul>
       </div>
-      <div class="icone-equipe">
+    </div>
+  </div>
+
+  <div class="conteudo-equipe" id="section-2" style="display: none;">
+    <div class="texto-equipe">
+      <div class="titulo-barra-equipe">
+        <div class="barra-vertical-equipe"></div>
+        <h1>Conheça nossa equipe</h1>
+      </div><br>
+      <p class="subtitulo-equipe">
+        Optar pelo Marcus Salgado Advogados Associados é escolher
+        <strong>ética, eficiência e resultados,</strong> com atendimento
+        humanizado, transparente e focado na confiança, garantindo
+        segurança jurídica e excelência na defesa de seus interesses.
+      </p>
+    </div><br>
+    <div class="linha-conteudo">
+      <!-- Ícone à esquerda -->
+      <div class="imagem-equipe">
         <img
-          src="{% static 'images/pages/index/caretup.png' %}" alt="Ícone representativo" class="icone-ajustado"/>
+          src="{% static 'images/pages/index/dr.thaylor.jpg' %}"
+          alt="Escritório de Advocacia"
+          class="imagem-ajustada"
+        />
+      </div>
+      <div class="retangulo-equipe">
+        <ul class="lista-retangulo">
+          <li>Dr. Thayllon Matos</li>
+          <br />
+          <li>
+            Formado em Direito pela Faculdade Estácio de Sá (2020) com especialização em Direito Previdenciário, Trabalhista e Processo do Trabalho. Possui experiência em avaliação de provas, elaboração de recursos e contestações junto ao TCE-MA, além de atuação no Procon/MA, Secretaria de Direitos Humanos e Câmara Municipal. Complementa sua formação com cursos da ESA/OAB em áreas como Processo do Trabalho e LGPD.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 
-
-  <div class="conteudo-equipe" id="section-2" style="display: none;">
-    <div class="texto-equipe">
-        <div class="titulo-barra-equipe">
-          <div class="barra-vertical-equipe"></div>
-          <h1>Conheça nossa equipe</h1>
-        </div>
-        <p class="subtitulo-equipe">
-          Optar pelo Marcus Salgado Advogados Associados é escolher
-          <strong>ética, eficiência e resultados,</strong> com atendimento
-          humanizado, transparente e focado na confiança, garantindo
-          segurança jurídica e excelência na defesa de seus interesses.
-        </p>
-      </div>
-      <div class="linha-conteudo">
-        <!-- Ícone à esquerda -->
-        <div class="icone-equipe-esquerda">
-            <img
-            src="{% static 'images/pages/index/vector.png' %}"
-            alt="Ícone representativo"
-            class="icone-ajustado"
-            />
-        </div>
-        <div class="imagem-equipe">
-          <img
-            src="{% static 'images/pages/index/dr.thaylor.jpg' %}"
-            alt="Escritório de Advocacia"
-            class="imagem-ajustada"
-          />
-        </div>
-        <div class="retangulo-equipe">
-          <ul class="lista-retangulo">
-            <li>Dr. Thayllon Matos (OAB/MA 0.000)</li>
-            <br />
-            <li>
-                Formado em Direito pela Faculdade Estácio de Sá (2020) com especialização em Direito Previdenciário, Trabalhista e Processo do Trabalho. Possui experiência em avaliação de provas, elaboração de recursos e contestações junto ao TCE-MA, além de atuação no Procon/MA, Secretaria de Direitos Humanos e Câmara Municipal. Complementa sua formação com cursos da ESA/OAB em áreas como Processo do Trabalho e LGPD.
-            </li>
-          </ul>
-        </div>
-        <div class="icone-equipe">
-            <img
-              src="{% static 'images/pages/index/caretup.png' %}" alt="Ícone representativo" class="icone-ajustado"/>
-          </div>
-      </div>
-  </div>
-
-
   <div class="conteudo-equipe" id="section-3" style="display: none;">
     <div class="texto-equipe">
-        <div class="titulo-barra-equipe">
-          <div class="barra-vertical-equipe"></div>
-          <h1>Conheça nossa equipe</h1>
-        </div>
-        <p class="subtitulo-equipe">
-          Optar pelo Marcus Salgado Advogados Associados é escolher
-          <strong>ética, eficiência e resultados,</strong> com atendimento
-          humanizado, transparente e focado na confiança, garantindo
-          segurança jurídica e excelência na defesa de seus interesses.
-        </p>
+      <div class="titulo-barra-equipe">
+        <div class="barra-vertical-equipe"></div>
+        <h1>Conheça nossa equipe</h1>
+      </div><br>
+      <p class="subtitulo-equipe">
+        Optar pelo Marcus Salgado Advogados Associados é escolher
+        <strong>ética, eficiência e resultados,</strong> com atendimento
+        humanizado, transparente e focado na confiança, garantindo
+        segurança jurídica e excelência na defesa de seus interesses.
+      </p>
+    </div><br>
+    <div class="linha-conteudo">
+      <!-- Ícone à esquerda -->
+      <div class="icone-equipe-esquerda"></div>
+      <div class="imagem-equipe">
+        <img
+          src="{% static 'images/pages/index/dra_raissa.jpg' %}"
+          alt="Escritório de Advocacia"
+          class="imagem-ajustada"
+        />
       </div>
-      <div class="linha-conteudo">
-        <!-- Ícone à esquerda -->
-        <div class="icone-equipe-esquerda">
-            <img
-            src="{% static 'images/pages/index/vector.png' %}"
-            alt="Ícone representativo"
-            class="icone-ajustado"
-            />
-        </div>
-        <div class="imagem-equipe">
-          <img
-            src="{% static 'images/pages/index/dra_raissa.jpg' %}"
-            alt="Escritório de Advocacia"
-            class="imagem-ajustada"
-          />
-        </div>
-        <div class="retangulo-equipe">
-          <ul class="lista-retangulo">
-            <li>Dr. Raissa Melo (OAB/MA 0.000)</li>
-            <br />
-            <li>
-                Formada em Direito pelo Centro Universitário UNDB desde 2022. Estagiou no Escritório Escola com foco em Direito Civil. Ela é pós-graduanda em Direitos Humanos
-            </li>
-          </ul>
-        </div>
-        <div class="icone-equipe">
-            <img
-              src="{% static 'images/pages/index/caretup.png' %}" alt="Ícone representativo" class="icone-ajustado"/>
-          </div>
+      <div class="retangulo-equipe">
+        <ul class="lista-retangulo">
+          <li>Dr. Raissa Melo </li>
+          <br />
+          <li>
+            Formada em Direito pelo Centro Universitário UNDB desde 2022. Estagiou no Escritório Escola com foco em Direito Civil. Ela é pós-graduanda em Direitos Humanos.
+          </li>
+        </ul>
       </div>
+    </div>
   </div>
 
   <div class="conteudo-equipe" id="section-4" style="display: none;">
     <div class="texto-equipe">
-        <div class="titulo-barra-equipe">
-          <div class="barra-vertical-equipe"></div>
-          <h1>Conheça nossa equipe</h1>
-        </div>
-        <p class="subtitulo-equipe">
-          Optar pelo Marcus Salgado Advogados Associados é escolher
-          <strong>ética, eficiência e resultados,</strong> com atendimento
-          humanizado, transparente e focado na confiança, garantindo
-          segurança jurídica e excelência na defesa de seus interesses.
-        </p>
+      <div class="titulo-barra-equipe">
+        <div class="barra-vertical-equipe"></div>
+        <h1>Conheça nossa equipe</h1>
+      </div><br>
+      <p class="subtitulo-equipe">
+        Optar pelo Marcus Salgado Advogados Associados é escolher
+        <strong>ética, eficiência e resultados,</strong> com atendimento
+        humanizado, transparente e focado na confiança, garantindo
+        segurança jurídica e excelência na defesa de seus interesses.
+      </p>
+    </div><br>
+    <div class="linha-conteudo">
+      <!-- Ícone à esquerda -->
+      <div class="imagem-equipe">
+        <img
+          src="{% static 'images/pages/index/dr_diogo.jpg' %}"
+          alt="Escritório de Advocacia"
+          class="imagem-ajustada"
+        />
       </div>
-      <div class="linha-conteudo">
-        <!-- Ícone à esquerda -->
-        <div class="icone-equipe-esquerda">
-            <img
-            src="{% static 'images/pages/index/vector.png' %}"
-            alt="Ícone representativo"
-            class="icone-ajustado"
-            />
-        </div>
-        <div class="imagem-equipe">
-          <img
-            src="{% static 'images/pages/index/dr_diogo.jpg' %}"
-            alt="Escritório de Advocacia"
-            class="imagem-ajustada"
-          />
-        </div>
-        <div class="retangulo-equipe">
-          <ul class="lista-retangulo">
-            <li>Dr. Diogo Moraes (OAB/MA 29392)</li>
-            <br />
-            <li>
-                Diogo Santos Moraes, Advogado. Formado pela Universidade Federal do Maranhão. Pós graduando em Direito Previdenciário, Processo Civil e Direito Civil
-            </li>
-          </ul>
-        </div>
-        <div class="icone-equipe">
-            <img
-              src="{% static 'images/pages/index/caretup.png' %}" alt="Ícone representativo" class="icone-ajustado"/>
-          </div>
+      <div class="retangulo-equipe">
+        <ul class="lista-retangulo">
+          <li>Dr. Diogo Moraes </li>
+          <br />
+          <li>
+            Diogo Santos Moraes, Advogado. Formado pela Universidade Federal do Maranhão. Pós-graduando em Direito Previdenciário, Processo Civil e Direito Civil.
+          </li>
+        </ul>
       </div>
+    </div>
   </div>
 
   <div class="conteudo-equipe" id="section-5" style="display: none;">
     <div class="texto-equipe">
-        <div class="titulo-barra-equipe">
-          <div class="barra-vertical-equipe"></div>
-          <h1>Conheça nossa equipe</h1>
-        </div>
-        <p class="subtitulo-equipe">
-          Optar pelo Marcus Salgado Advogados Associados é escolher
-          <strong>ética, eficiência e resultados,</strong> com atendimento
-          humanizado, transparente e focado na confiança, garantindo
-          segurança jurídica e excelência na defesa de seus interesses.
-        </p>
+      <div class="titulo-barra-equipe">
+        <div class="barra-vertical-equipe"></div>
+        <h1>Conheça nossa equipe</h1>
+      </div><br>
+      <p class="subtitulo-equipe">
+        Optar pelo Marcus Salgado Advogados Associados é escolher
+        <strong>ética, eficiência e resultados,</strong> com atendimento
+        humanizado, transparente e focado na confiança, garantindo
+        segurança jurídica e excelência na defesa de seus interesses.
+      </p>
+    </div><br>
+    <div class="linha-conteudo">
+      <!-- Ícone à esquerda -->
+      <div class="icone-equipe-esquerda"></div>
+      <div class="imagem-equipe">
+        <img
+          src="{% static 'images/pages/index/dr_huan.jpg' %}"
+          alt="Escritório de Advocacia"
+          class="imagem-ajustada"
+        />
       </div>
-      <div class="linha-conteudo">
-        <!-- Ícone à esquerda -->
-        <div class="icone-equipe-esquerda">
-            <img
-            src="{% static 'images/pages/index/vector.png' %}"
-            alt="Ícone representativo"
-            class="icone-ajustado"
-            />
-        </div>
-        <div class="imagem-equipe">
-          <img
-            src="{% static 'images/pages/index/dr_huan.jpg' %}"
-            alt="Escritório de Advocacia"
-            class="imagem-ajustada"
-          />
-        </div>
-        <div class="retangulo-equipe">
-          <ul class="lista-retangulo">
-            <li>Dr. Huan Barros (OAB/MA 0.000)</li>
-            <br />
-            <li>
-                Huan Barros é advogado graduado em Direito pela Universidade Ceuma e pós-graduado em Direito Público. Com experiência no setor cível-empresarial, passou por escritórios renomados, onde se especializou em contencioso estratégico, direito contratual, empresarial e público municipalista.
-            </li>
-          </ul>
-        </div>
+      <div class="retangulo-equipe">
+        <ul class="lista-retangulo">
+          <li>Dr. Huan Barros </li>
+          <br />
+          <li>
+            Huan Barros é advogado graduado em Direito pela Universidade Ceuma e pós-graduado em Direito Público. Com experiência no setor cível-empresarial, passou por escritórios renomados, onde se especializou em contencioso estratégico, direito contratual, empresarial e público municipalista.
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll(".conteudo-equipe");
-    let currentIndex = 0;
+  // Configuração do carrossel
+  let currentSection = 1; // Índice da seção atual
+  const totalSections = 5; // Número total de seções
+  const delay = 5000; // Tempo entre trocas automáticas (5 segundos)
+  const sections = document.querySelectorAll(".conteudo-equipe");
 
-    function showSection(index) {
-      if (index >= 0 && index < sections.length) {
-        sections.forEach((section, i) => {
-          section.style.display = i === index ? "block" : "none"; // Mostra apenas a seção atual
-        });
-        sections[index].classList.add("fade-in");
-      }
+  // Função para alternar entre as seções
+  function switchSection(next = true) {
+    // Oculta a seção atual
+    sections[currentSection - 1].style.display = "none";
+
+    // Calcula a próxima seção
+    if (next) {
+      currentSection = (currentSection % totalSections) + 1; // Próxima seção
+    } else {
+      currentSection = currentSection - 1 || totalSections; // Seção anterior
     }
 
-    // Inicializa exibindo a primeira seção
-    showSection(currentIndex);
+    // Mostra a nova seção
+    sections[currentSection - 1].style.display = "block";
+  }
 
-    // Adiciona eventos de clique para os ícones (direita e esquerda)
-    sections.forEach((section, index) => {
-      const nextIcon = section.querySelector(".icone-equipe"); // Ícone direito
-      const prevIcon = section.querySelector(".icone-equipe-esquerda"); // Ícone esquerdo
+  // Inicia o intervalo de troca automática
+  setInterval(() => switchSection(), delay);
 
-      // Avançar para a próxima seção (ícone direito)
-      if (nextIcon) {
-        nextIcon.addEventListener("click", () => {
-          if (index + 1 < sections.length) {
-            currentIndex = index + 1;
-            showSection(currentIndex);
-          }
-        });
-      }
+  // Adiciona suporte ao swipe para mobile
+  let startX = 0; // Posição inicial do toque
+  let endX = 0;   // Posição final do toque
 
-      // Voltar para a seção anterior (ícone esquerdo)
-      if (prevIcon) {
-        prevIcon.addEventListener("click", () => {
-          if (index - 1 >= 0) {
-            currentIndex = index - 1;
-            showSection(currentIndex);
-          }
-        });
-      }
-    });
+  document.querySelector(".secao-equipe").addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX; // Salva a posição inicial do toque
+  });
+
+  document.querySelector(".secao-equipe").addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX; // Salva a posição final do toque
+    if (endX < startX - 50) switchSection(true); // Swipe para a esquerda (próxima seção)
+    if (endX > startX + 50) switchSection(false); // Swipe para a direita (seção anterior)
+  });
+
+  // Inicializa o estado inicial (mostra apenas a primeira seção)
+  sections.forEach((section, index) => {
+    section.style.display = index === 0 ? "block" : "none";
   });
 </script>
 
@@ -495,48 +461,49 @@
 
 
 <!-- Formulário -->
-<section class="contact-section">
-    <div class="contact-left">
-        <h2>Fale Conosco</h2>
-        <h3>Marcus Salgado Advogados Associados</h3>
-        <p>A sua opinião é fundamental para nós! Entre em contato sempre que precisar. Estamos aqui para ajudar com qualquer dúvida ou esclarecimento.</p>
-    </div>
-    <div class="contact-right">
-        <form id="contact-form">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" placeholder="Digite seu nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Telefone com DDD</label>
-                    <input type="tel" id="phone" placeholder="Digite seu telefone" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Assunto</label>
-                    <select id="subject" required>
-                        <option value="" disabled selected>Selecione o assunto</option>
-                        <option value="reuniao">Quero solicitar uma reunião</option>
-                        <option value="duvida">Quero tirar uma dúvida</option>
-                        <option value="sugestao">Quero fazer uma sugestão</option>
-                        <option value="trabalho">Quero trabalhar com vocês</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="message">Mensagem</label>
-                <textarea id="message" rows="4" placeholder="Digite sua mensagem" required></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+<section class="custom-section contact-section">
+  <div class="contact-left">
+      <h2>Fale Conosco</h2><br>
+      <h3>Marcus Salgado Advogados Associados</h3><br>
+      <p>A sua opinião é fundamental para nós!<br> Entre em contato sempre que precisar. Estamos aqui para ajudar com qualquer dúvida ou esclarecimento.</p>
+  </div>
+  <div class="contact-right">
+      <form id="contact-form">
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="name">Nome</label>
+                  <input type="text" id="name" placeholder="Digite seu nome" required>
+              </div>
+              <div class="form-group">
+                  <label for="phone">Telefone com DDD</label>
+                  <input type="tel" id="phone" placeholder="Digite seu telefone" required>
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" placeholder="Digite seu e-mail" required>
+              </div>
+              <div class="form-group">
+                  <label for="subject">Assunto</label>
+                  <select id="subject" required>
+                      <option value="" disabled selected>Selecione o assunto</option>
+                      <option value="reuniao">Quero solicitar uma reunião</option>
+                      <option value="duvida">Quero tirar uma dúvida</option>
+                      <option value="sugestao">Quero fazer uma sugestão</option>
+                      <option value="trabalho">Quero trabalhar com vocês</option>
+                      <option value="outro">Outro</option>
+                  </select>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" rows="4" placeholder="Digite sua mensagem" required></textarea>
+          </div>
+          <a href="https://w.app/MarcusSalgadoAssessoriaJurdica" class="button-link">Enviar</a>
+      </form>
+  </div>
 </section>
+
 
 {% endblock %}

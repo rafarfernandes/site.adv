@@ -1,13 +1,11 @@
-
 .slide {
     position: relative;
     width: 100%;
-    max-height: 804px; /* Ajuste da altura máxima */
+    max-height: 804px;
     overflow: hidden;
     background-color: var(--cor-azul-escuro);
-    margin-top: 0; /* Remove o espaço acima da section */
+    margin-top: 0;
 }
-
 
 .slide-container {
     display: flex;
@@ -17,14 +15,22 @@
 .slide-item {
     flex: 1 0 100%;
     text-align: center;
-    position: relative; /* Para a opacidade da imagem */
+    position: relative;
 }
 
-.slide-item img {
-    width: 1440px; /* Largura fixa */
-    height: 804px; /* Altura fixa */
-    object-fit: cover; /* Ajusta a imagem para cobrir o container */
-    opacity: 0.25; /* Define a opacidade */
+.slide-item .slide-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.25;
+}
+
+.slide-item .desktop {
+    display: block;
+}
+
+.slide-item .mobile {
+    display: none;
 }
 
 .slide-item .logo {
@@ -33,6 +39,7 @@
     height: 84.36px;
     top: 163.15px;
     left: 102px;
+    color: white;
 }
 
 .slide-item .text-container {
@@ -46,35 +53,113 @@
     gap: 40px;
 }
 
+.slide-item .text-container .text-block {
+    width: 529px;
+    height: 246px;
+    display: flex;
+    flex-direction: column;
+    left: 102px;
+    gap: 40px;
+}
+
 .slide-item .text-container .title {
+    font-family: 'Barlow', sans-serif;
     width: 529px;
     height: 154px;
-    font-family: 'Barlow', sans-serif;
     font-weight: 400;
     font-size: 64px;
     line-height: 76.8px;
+    text-align: left;
     color: #FFFFFF;
 }
 
 .slide-item .text-container .button {
-    width: 218px; /* Largura fixa */
-    height: 32px; /* Altura ajustável */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 10px; /* Espaçamento interno */
-    background-color: var(--cor-azul-vibrante); /* Cor do fundo */
-    color: white; /* Cor do texto */
-    text-decoration: none; /* Remover sublinhado */
-    text-align: center; /* Centralizar texto */
-    line-height: 31.74px; /* Para centralizar verticalmente */
-    display: inline-block;
-    transition: background-color 0.3s ease; /* Transição suave */
+    width: 294px;
+    height: 52px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #1160A3;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 31.74px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
     font-size: 23px;
     font-family: 'Alata', sans-serif;
     font-weight: 400;
 }
 
+.slide-item .text-container .button .icon {
+    width: 27px;
+    height: 27px;
+}
 
-/* Efeito de hover para o botão */
 .slide-item .text-container .button:hover {
-    background-color: #0056b3; /* Cor de fundo quando hover */
+    background-color: #0056b3;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .slide-item .desktop {
+        display: none;
+    }
+
+    .slide-item .mobile {
+        display: block;
+    }
+
+    .slide-item .logo {
+        top: 50px;
+        left: 20px;
+        width: 150px;
+        height: auto;
+    }
+
+    .slide-item .text-container {
+        width: auto;
+        top: 150px;
+        left: 20px;
+        right: 20px;
+        gap: 20px;
+    }
+
+    .slide-item .text-container .text-block {
+        width: auto;
+        height: auto;
+        gap: 20px;
+    }
+
+    .slide-item .text-container .title {
+        width: 177px;
+        height: 114px;
+        font-size: 32px;
+        line-height: 38.4px;
+    }
+
+    .slide-item .text-container .button {
+        width: 177px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+        gap: 8px;
+        margin-top: 40px;
+        font-size: 13px;
+        line-height: 17.94px;
+        background-color: #1160A3; /* Cor de fundo */
+        color: #FFFFFF; /* Cor do texto */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-decoration: none;
+        border: none;
+        white-space: nowrap; /* Garantir que o texto não quebre a linha */
+        text-align: center;  /* Centralizar o texto */
+    }
+        
 }

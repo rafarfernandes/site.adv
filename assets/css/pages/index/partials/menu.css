@@ -16,7 +16,7 @@ header {
     width: 100%;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
-    position: sticky; /* Fixa o menu no topo ao rolar a página */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -24,15 +24,16 @@ header {
 .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
+    justify-content: flex-start; /* Alinhado mais à esquerda */
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
+    gap: 3rem; /* Maior espaçamento entre logo e itens */
 }
 
 /* Logo */
 .logo img {
-    height: 50px;
+    height: 45px;
     transition: transform 0.3s ease;
 }
 
@@ -43,14 +44,14 @@ header {
 /* Itens do menu */
 .menu-items {
     display: flex;
-    gap: 2rem;
+    gap: 2rem; /* Espaçamento aumentado entre os itens */
     list-style: none;
 }
 
 .menu-items li {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; /* Impede a quebra de linha */
+    white-space: nowrap;
 }
 
 .menu-items li a {
@@ -58,7 +59,7 @@ header {
     font-size: 1rem;
     font-weight: 500;
     color: #201E1E;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem; /* Maior espaçamento interno */
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
@@ -66,7 +67,7 @@ header {
 .menu-items li a:hover {
     background-color: #201E1E;
     color: #ffffff;
-    transform: translateY(-3px); /* Animação para levantar o item no hover */
+    transform: translateY(-2px);
 }
 
 /* Ícone do menu para mobile */
@@ -78,7 +79,7 @@ header {
 }
 
 .menu-toggle .bar {
-    width: 30px;
+    width: 25px;
     height: 3px;
     background-color: #000000;
     border-radius: 2px;
@@ -86,7 +87,7 @@ header {
 }
 
 .menu-toggle.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -94,7 +95,7 @@ header {
 }
 
 .menu-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Menu responsivo */
@@ -122,8 +123,8 @@ header {
     }
 
     .menu-items li a {
-        padding: 1rem;
-        font-size: 1.2rem;
+        padding: 0.8rem;
+        font-size: 1rem;
     }
 
     .menu-toggle {
@@ -134,7 +135,7 @@ header {
 /* Menu para telas muito pequenas */
 @media (max-width: 480px) {
     .menu {
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1rem;
     }
 
     .logo img {
@@ -142,6 +143,6 @@ header {
     }
 
     .menu-items li a {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
