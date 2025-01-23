@@ -414,44 +414,59 @@
   const totalSections = 5; // Número total de seções
   const delay = 5000; // Tempo entre trocas automáticas (5 segundos)
   const sections = document.querySelectorAll(".conteudo-equipe");
+  let autoSwitchInterval;
+
+  // Função para mostrar uma seção específica
+  function showSection(index) {
+    sections.forEach((section, i) => {
+      section.style.display = i === index ? "block" : "none";
+    });
+  }
 
   // Função para alternar entre as seções
   function switchSection(next = true) {
-    // Oculta a seção atual
-    sections[currentSection - 1].style.display = "none";
-
-    // Calcula a próxima seção
-    if (next) {
-      currentSection = (currentSection % totalSections) + 1; // Próxima seção
-    } else {
-      currentSection = currentSection - 1 || totalSections; // Seção anterior
-    }
-
-    // Mostra a nova seção
-    sections[currentSection - 1].style.display = "block";
+    currentSection = next
+      ? (currentSection % totalSections) + 1 // Próxima seção
+      : currentSection - 1 || totalSections; // Seção anterior
+    showSection(currentSection - 1);
   }
 
   // Inicia o intervalo de troca automática
-  setInterval(() => switchSection(), delay);
+  function startAutoSwitch() {
+    autoSwitchInterval = setInterval(() => switchSection(), delay);
+  }
+
+  // Pausa o intervalo de troca automática
+  function stopAutoSwitch() {
+    clearInterval(autoSwitchInterval);
+  }
 
   // Adiciona suporte ao swipe para mobile
-  let startX = 0; // Posição inicial do toque
-  let endX = 0;   // Posição final do toque
+  function enableSwipe() {
+    let startX = 0; // Posição inicial do toque
+    document.querySelector(".secao-equipe").addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX; // Salva a posição inicial do toque
+    });
 
-  document.querySelector(".secao-equipe").addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX; // Salva a posição inicial do toque
-  });
+    document.querySelector(".secao-equipe").addEventListener("touchend", (e) => {
+      const endX = e.changedTouches[0].clientX; // Salva a posição final do toque
+      if (endX < startX - 50) switchSection(true); // Swipe para a esquerda
+      if (endX > startX + 50) switchSection(false); // Swipe para a direita
+    });
+  }
 
-  document.querySelector(".secao-equipe").addEventListener("touchend", (e) => {
-    endX = e.changedTouches[0].clientX; // Salva a posição final do toque
-    if (endX < startX - 50) switchSection(true); // Swipe para a esquerda (próxima seção)
-    if (endX > startX + 50) switchSection(false); // Swipe para a direita (seção anterior)
-  });
+  // Inicializa o carrossel
+  function initCarousel() {
+    showSection(0); // Mostra apenas a primeira seção inicialmente
+    startAutoSwitch(); // Inicia troca automática
+    enableSwipe(); // Habilita suporte a swipe
+    // Pausa a troca automática ao passar o mouse
+    document.querySelector(".secao-equipe").addEventListener("mouseover", stopAutoSwitch);
+    document.querySelector(".secao-equipe").addEventListener("mouseout", startAutoSwitch);
+  }
 
-  // Inicializa o estado inicial (mostra apenas a primeira seção)
-  sections.forEach((section, index) => {
-    section.style.display = index === 0 ? "block" : "none";
-  });
+  // Inicia o carrossel ao carregar a página
+  document.addEventListener("DOMContentLoaded", initCarousel);
 </script>
 
 

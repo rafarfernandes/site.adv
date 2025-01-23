@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 20px;
+  padding: 60px 20px; /* Reduzi o padding para melhorar a aparência em telas pequenas */
   background: linear-gradient(135deg, #f4f4f4, #eaeaea);
   width: 100%;
 }
@@ -16,7 +16,8 @@
   align-items: center;
   max-width: 1200px;
   width: 90%;
-  gap: 50px;
+  margin: 0 auto;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -54,25 +55,21 @@
 /* Descrição */
 .descricao {
   font-family: 'Barlow', sans-serif;
-  font-size: 18px; /* Mantive o tamanho de fonte confortável */
-  line-height: 1.4; /* Reduzi um pouco o espaçamento entre as linhas para evitar grandes espaços */
-  color: #333333; /* Cor mais suave e escura */
-  margin-top: 15px; /* Distância do topo */
-  margin-bottom: 20px; /* Distância inferior */
-  text-align: left; /* Justifica o texto */
-  letter-spacing: 0.5px; /* Pequeno espaçamento entre as letras */
-  word-wrap: break-word; /* Permite quebra de palavras longas para evitar linhas muito grandes */
+  font-size: 18px;
+  line-height: 1.5; 
+  color: #333333;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: left; /* Alinhamento à esquerda */
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
 }
-
-
-
 
 /* Container do Carrossel */
 .container-carrossel {
   width: 100%;
   max-width: 580px;
-  height: auto;
-  aspect-ratio: 16 / 9; /* Mantém a proporção do carrossel */
+  aspect-ratio: 16 / 9;
   position: relative;
   background: #07233b;
   overflow: hidden;
@@ -85,26 +82,45 @@
 .carrossel {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  position: relative;
   width: 100%;
 }
 
 /* Imagem do Carrossel */
 .imagem-carrossel {
-  flex: 0 0 100%; /* A imagem ocupa toda a largura do contêiner */
+  flex: 0 0 100%;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+  object-fit: cover;
   transition: transform 0.5s ease-in-out, filter 0.3s ease;
-  filter: brightness(0.95); /* Diminui o brilho da imagem */
+  filter: brightness(0.95);
 }
 
 .imagem-carrossel:hover {
-  transform: scale(1.05); /* Aumenta o zoom ao passar o mouse */
-  filter: brightness(1); /* Restaura o brilho */
+  transform: scale(1.05);
+  filter: brightness(1);
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+  .container-principal {
+    gap: 40px;
+  }
+
+  .container-carrossel {
+    aspect-ratio: 4 / 3;
+  }
+
+  .descricao {
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: left; /* Mantém alinhado à esquerda */
+  }
+
+  .nome {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 768px) {
   .container-principal {
     flex-direction: column;
@@ -113,33 +129,40 @@
 
   .container-carrossel {
     width: 100%;
-    max-width: 100%;
-    aspect-ratio: 4 / 3; /* Ajusta a proporção para telas menores */
-  }
-
-  .imagem-carrossel {
-    width: 100%; /* A imagem ocupa toda a largura do contêiner */
-    height: 100%; /* A imagem ocupa toda a altura do contêiner */
-    object-fit: cover; /* A imagem cobre todo o espaço do contêiner */
-  }
-
-  .container-texto {
-    max-width: 100%;
+    aspect-ratio: 3 / 2;
   }
 
   .nome {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .descricao {
-    font-size: 16px; /* Ajusta o tamanho da fonte em telas pequenas */
-    line-height: 1.3; /* Reduzi o espaçamento entre as linhas */
-    margin-top: 10px; /* Ajusta o espaçamento superior para telas pequenas */
-    margin-bottom: 15px; /* Ajusta o espaçamento inferior para não ficar tão afastado */
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: left; /* Mantém alinhado à esquerda */
   }
-  
-  /* Ajusta o espaçamento entre parágrafos no mobile */
-  .descricao p {
-    margin-bottom: 5px; /* Menor espaçamento entre os parágrafos */
+}
+
+@media (max-width: 480px) {
+  .container-principal {
+    gap: 20px;
+  }
+
+  .nome {
+    font-size: 24px;
+    text-align: center; /* Centraliza o título */
+  }
+
+  .descricao {
+    font-size: 15px;
+    line-height: 1.3;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    text-align: left; /* Mantém alinhado à esquerda */
+  }
+
+  .barra-vertical {
+    height: 40px;
   }
 }
