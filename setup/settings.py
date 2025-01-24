@@ -122,9 +122,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 
-STATIC_URL = '/static/'
-STATIC_ROOT = '/var/www/staticfiles'
+# URL para acessar os arquivos estáticos
+STATIC_URL = '/assets/'
 
+# Diretório local onde os arquivos estáticos coletados serão armazenados
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Diretórios adicionais para procurar arquivos estáticos
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'assets'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
