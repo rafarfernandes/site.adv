@@ -6,25 +6,30 @@
   margin: 0 auto;
   padding: 50px 20px;
   background-color: #ffffff;
-  border-radius: 0px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
+  box-sizing: border-box;
 }
 
 .conteudo-equipe {
   width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Aumenta o espaço entre os elementos da equipe */
+  gap: 30px;
+  align-items: center;
 }
 
 .titulo-barra-equipe {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-left: 20px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .barra-vertical-equipe {
@@ -45,11 +50,10 @@
 .texto-equipe h1 {
   font-family: "Alata", sans-serif;
   font-weight: 400;
-  font-size: 34.19px;
+  font-size: 34px;
   line-height: 47px;
   color: #201e1e;
-  margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
-  
+  margin: 0;
 }
 
 .texto-equipe .subtitulo-equipe {
@@ -58,9 +62,8 @@
   font-size: 22px;
   line-height: 30px;
   color: #201e1e;
-  margin: 0px 0px 20px 60px; /* Ajusta a margem inferior para espaçamento adequado */
+  margin: 10px 0 0 60px;
 }
-
 
 /* Configuração para as linhas */
 .linha-conteudo {
@@ -71,13 +74,13 @@
   align-items: center;
   gap: 40px;
   padding: 30px;
-  position: relative;
+  box-sizing: border-box;
 }
 
 /* Estilo da imagem da equipe */
 .imagem-equipe {
-  width: 321px;
-  height: 398px;
+  width: 321px; /* Tamanho fixo */
+  height: 398px; /* Tamanho fixo */
   background-color: #07233b;
   border-radius: 8px;
   border: 4px solid #07233b;
@@ -85,6 +88,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0; /* Impede que o elemento diminua */
 }
 
 .imagem-ajustada {
@@ -95,8 +99,8 @@
 
 /* Estilo do retângulo */
 .retangulo-equipe {
-  width: 847px;
-  height: 398px;
+  width: 847px; /* Tamanho fixo */
+  height: 398px; /* Tamanho fixo */
   background-color: transparent;
   border-radius: 8px;
   border: 4px solid #07233b;
@@ -105,11 +109,14 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
+  box-sizing: border-box;
+  flex-shrink: 0; /* Impede que o elemento diminua */
 }
 
 .lista-retangulo {
   color: #201e1e;
-  width: 747px;
+  width: 100%;
+  max-width: 747px;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-size: 23px;
@@ -173,15 +180,14 @@
 @media (max-width: 1024px) {
   .linha-conteudo {
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
 
+  /* Mantém o tamanho fixo da imagem e do retângulo */
   .imagem-equipe,
   .retangulo-equipe {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+    width: 321px; /* Tamanho fixo */
+    height: 398px; /* Tamanho fixo */
   }
 
   .texto-equipe h1 {
@@ -199,35 +205,27 @@
     gap: 15px;
   }
 
-  .imagem-equipe {
-    max-width: 90%;
-    height: auto;
-  }
-
+  /* Mantém o tamanho fixo da imagem e do retângulo */
+  .imagem-equipe,
   .retangulo-equipe {
-    max-width: 90%;
-    height: auto;
-  }
-
-  .barra-vertical-equipe {
-    margin-left: -20px;
-    
+    width: 321px; /* Tamanho fixo */
+    height: 398px; /* Tamanho fixo */
   }
 
   .texto-equipe h1 {
-    width: 400px;
-    font-size: 20px;
-    line-height: 27.6px;
-    
+    font-size: 24px;
+    line-height: 32px;
   }
 
   .texto-equipe .subtitulo-equipe {
-    display: none;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 10px 0 0 40px;
   }
 
   .lista-retangulo {
-    width: 100%;
-    padding: 10px;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -236,22 +234,27 @@
     padding: 15px;
   }
 
-  .imagem-equipe {
-    max-width: 100%;
-  }
-
+  /* Mantém o tamanho fixo da imagem e do retângulo */
+  .imagem-equipe,
   .retangulo-equipe {
-    max-width: 100%;
+    width: 321px; /* Tamanho fixo */
+    height: 398px; /* Tamanho fixo */
   }
 
   .texto-equipe h1 {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 28px;
+  }
+
+  .texto-equipe .subtitulo-equipe {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px 0 0 20px;
   }
 
   .lista-retangulo {
-    font-size: 14px;
-    line-height: 18px;
-    padding: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 15px;
   }
 }

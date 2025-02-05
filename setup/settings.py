@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -105,6 +105,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# settings.py
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Servidor SMTP do Gmail
+EMAIL_PORT = 587  # Porta do servidor SMTP do Gmail
+EMAIL_USE_TLS = True  # Usar TLS para segurança
+EMAIL_HOST_USER = 'marcusalgadoadvogados@gmail.com'  # Seu e-mail
+EMAIL_HOST_PASSWORD = 'zkmkepqdiuvzocey'  # Sua senha do e-mail
+EMAIL_FROM_USER = 'marcusalgadoadvogados@gmail.com'  # E-mail que aparecerá como remetente
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

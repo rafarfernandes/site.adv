@@ -27,6 +27,7 @@
     </div>
 </section>
 
+
 <!-- Seção do Perfil -->
 <section id="marcus" class="secao-perfil">
   <div class="container-principal">
@@ -77,9 +78,7 @@
   updateCarousel();
 </script>
 
-
-
-<!-- Escritório de Advocacia -->
+<!-- Seção do Escritorio -->
 <section id="escritorio" class="secao-advocacia">
   <!-- Conteúdo Principal -->
   <div class="conteudo-container">
@@ -129,13 +128,38 @@
       <p class="estatistica-descricao">Custos Recuperados para Clientes</p>
     </div>
   </div>
+
+  <!-- Nossos Diferenciais -->
+  <div class="diferenciais-container">
+    <h2 class="diferenciais-titulo">Nossos Diferenciais</h2>
+    <p class="diferenciais-descricao">
+      No nosso escritório, priorizamos a excelência e a satisfação dos nossos clientes. Conheça alguns dos nossos principais diferenciais:
+    </p>
+    <div class="diferenciais-lista">
+      <div class="diferencial-item">
+        <div class="icone-diferencial">
+          <i class="fas fa-user-tie"></i> <!-- Ícone de atendimento personalizado -->
+        </div>
+        <h3>Atendimento Personalizado</h3>
+        <p>Oferecemos um atendimento exclusivo, adaptado às necessidades específicas de cada cliente.</p>
+      </div>
+      <div class="diferencial-item">
+        <div class="icone-diferencial">
+          <i class="fas fa-users-cog"></i> <!-- Ícone de equipe capacitada -->
+        </div>
+        <h3>Equipe Capacitada</h3>
+        <p>Contamos com profissionais altamente qualificados e atualizados com as melhores práticas jurídicas.</p>
+      </div>
+      <div class="diferencial-item">
+        <div class="icone-diferencial">
+          <i class="fas fa-shield-alt"></i> <!-- Ícone de transparência e segurança -->
+        </div>
+        <h3>Transparência e Segurança</h3>
+        <p>Garantimos total clareza e segurança em todos os processos, mantendo a confiança dos nossos clientes.</p>
+      </div>
+    </div>
+  </div>
 </section>
-
-
-
-
-
-
 
 
 
@@ -146,53 +170,54 @@
   <div class="logo-container">
     <img src="{% static 'images/pages/index/marca-dagua-branca.png' %}" alt="Logo" class="logo" />
   </div>
+
   <h2 class="titulo-servicos">
     <span class="linha-vertical"></span> Serviços
   </h2>
+
   <div class="container-servicos">
     <!-- Cartão 1 -->
     <div class="caixa-servico">
-        <div class="circulo-icone">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000000" class="bi bi-bank" viewBox="0 0 16 16">
-            <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
-          </svg>
-        </div>
-        <h3 class="titulo-servico">Assessoria Jurídica</h3>
-        <p class="descricao-servico">Aos Tribunais de 1ª e 2ª Instância</p>
+      <div class="circulo-icone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000000" class="bi bi-bank" viewBox="0 0 16 16">
+          <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
+        </svg>
       </div>
-      
+      <h3 class="titulo-servico">Atuação em Tribunais</h3>
+      <p class="descricao-servico">Representação jurídica em processos de 1ª e 2ª instância, com estratégias personalizadas para cada caso.</p>
+    </div>
 
     <!-- Cartão 2 -->
     <div class="caixa-servico">
       <div class="circulo-icone">
-        <img src="{% static 'images/pages/index/gavelsvg.svg' %}" alt="Descrição da imagem" width="40" height="40">
+        <img src="{% static 'images/pages/index/gavelsvg.svg' %}" alt="Tribunais de Contas" width="40" height="40">
       </div>
-      <h3 class="titulo-servico">Assessoria Jurídica</h3>
-      <p class="descricao-servico">No patrocínio de Defesas e Acompanhamento no TCE e TCU</p>
+      <h3 class="titulo-servico">Defesa em Tribunais de Contas</h3>
+      <p class="descricao-servico">Patrocínio de defesas e acompanhamento de processos no TCE e TCU, com foco em resultados eficazes.</p>
     </div>
 
     <!-- Cartão 3 -->
     <div class="caixa-servico">
       <div class="circulo-icone">
-        <img src="{% static 'images/pages/index/scroll.png' %}" alt="Descrição da imagem" width="40" height="40">
+        <img src="{% static 'images/pages/index/scroll.png' %}" alt="Licitações e Contratos" width="40" height="40">
       </div>
-      <h3 class="titulo-servico">Assessoria Jurídica</h3>
-      <p class="descricao-servico">A Licitações e Contratos Administrativos</p>
+      <h3 class="titulo-servico">Licitações e Contratos</h3>
+      <p class="descricao-servico">Assessoria jurídica especializada em licitações e contratos administrativos, garantindo conformidade legal.</p>
     </div>
 
     <!-- Cartão 4 -->
     <div class="caixa-servico">
       <div class="circulo-icone">
-        <img src="{% static 'images/pages/index/building.png' %}" alt="Descrição da imagem" width="40" height="40">
+        <img src="{% static 'images/pages/index/building.png' %}" alt="Controle Interno" width="40" height="40">
       </div>
-      <h3 class="titulo-servico">Assessoria Jurídica</h3>
-      <p class="descricao-servico">A Controle Interno e Auditoria Preventiva</p>
+      <h3 class="titulo-servico">Controle Interno e Auditoria</h3>
+      <p class="descricao-servico">Consultoria em controle interno e auditoria preventiva, mitigando riscos e assegurando a legalidade dos processos.</p>
     </div>
 
     <!-- Cartão 5 -->
     <div class="caixa-servico">
       <div class="circulo-icone">
-        <img src="{% static 'images/pages/index/auction.png' %}" alt="Descrição da imagem" width="40" height="40">           
+        <img src="{% static 'images/pages/index/auction.png' %}" alt="Defesa Criminal" width="40" height="40">
       </div>
       <h3 class="titulo-servico">Defesa Criminal</h3>
       <p class="descricao-servico">Proteção em casos de acusações criminais, garantindo seus direitos e defesa estratégica.</p>
@@ -201,7 +226,7 @@
     <!-- Cartão 6 -->
     <div class="caixa-servico">
       <div class="circulo-icone">
-        <img src="{% static 'images/pages/index/honesty.png' %}" alt="Descrição da imagem" width="40" height="40">                     
+        <img src="{% static 'images/pages/index/honesty.png' %}" alt="Consultoria Trabalhista" width="40" height="40">
       </div>
       <h3 class="titulo-servico">Consultoria Trabalhista</h3>
       <p class="descricao-servico">Apoio em relações de trabalho, defesa de direitos e resolução de conflitos.</p>
@@ -210,7 +235,7 @@
     <!-- Cartão 7 -->
     <div class="caixa-servico">
       <div class="circulo-icone">
-        <img src="{% static 'images/pages/index/retirement.png' %}" alt="Descrição da imagem" width="40" height="40">                              
+        <img src="{% static 'images/pages/index/retirement.png' %}" alt="Direito Previdenciário" width="40" height="40">
       </div>
       <h3 class="titulo-servico">Direito Previdenciário</h3>
       <p class="descricao-servico">Orientação em benefícios e aposentadorias, assegurando acesso à previdência social.</p>
@@ -219,14 +244,16 @@
     <!-- Cartão 8 -->
     <div class="caixa-servico">
       <div class="circulo-icone">
-        <img src="{% static 'images/pages/index/family.png' %}" alt="Descrição da imagem" width="40" height="40">                                                            
+        <img src="{% static 'images/pages/index/family.png' %}" alt="Direito da Família" width="40" height="40">
       </div>
       <h3 class="titulo-servico">Direito da Família</h3>
       <p class="descricao-servico">Assistência em divórcios, guarda, pensão e demais questões familiares.</p>
     </div>
   </div>
+
   <a href="https://w.app/MarcusSalgadoAssessoriaJurdica" class="botao-cta">Quero uma assessoria</a>
 </section>
+
 
 
 
@@ -479,14 +506,21 @@
 
 
 <!-- Formulário -->
+<!-- Formulário -->
 <section class="custom-section contact-section">
   <div class="contact-left">
-      <h2>Fale Conosco</h2><br>
-      <h3>Marcus Salgado Advogados Associados</h3><br>
-      <p>A sua opinião é fundamental para nós!<br> Entre em contato sempre que precisar. Estamos aqui para ajudar com qualquer dúvida ou esclarecimento.</p>
+      <h2>Fale Conosco</h2>
+      <h3>Marcus Salgado Advogados Associados</h3>
+      <p>
+          A sua opinião é fundamental para nós!<br>
+          Entre em contato pelos nossos canais sempre que precisar.<br>
+          Estamos aqui para ajudar com qualquer dúvida ou esclarecimento.
+      </p>
   </div>
   <div class="contact-right">
       <form id="contact-form">
+          {% csrf_token %}  <!-- CSRF Token será inserido automaticamente -->
+          
           <div class="form-row">
               <div class="form-group">
                   <label for="name">Nome</label>
@@ -518,10 +552,50 @@
               <label for="message">Mensagem</label>
               <textarea id="message" rows="4" placeholder="Digite sua mensagem" required></textarea>
           </div>
-          <a href="https://w.app/MarcusSalgadoAssessoriaJurdica" class="button-link">Enviar</a>
+          <button type="button" id="enviar-btn" class="button-link">Enviar</button>
       </form>
   </div>
 </section>
 
-
+<script>
+  document.getElementById('enviar-btn').addEventListener('click', function() {
+      const nome = document.getElementById('name').value.trim();
+      const telefone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const assunto = document.getElementById('subject').value;
+      const mensagem = document.getElementById('message').value.trim();
+  
+      // Validações básicas no frontend
+      if (!nome || !telefone || !email || !assunto || !mensagem) {
+          alert("Todos os campos são obrigatórios!");
+          return;
+      }
+  
+      const data = { name: nome, phone: telefone, email: email, subject: assunto, message: mensagem };
+  
+      // Obter token CSRF
+      const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+  
+      fetch('/enviar-email/', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': csrftoken
+          },
+          body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.status === 'success') {
+              alert('E-mail enviado com sucesso!');
+              document.getElementById('contact-form').reset(); // Limpar o formulário
+          } else {
+              alert('Erro ao enviar e-mail: ' + data.message);
+          }
+      })
+      .catch(error => {
+          console.error('Erro:', error);
+      });
+  });
+</script>
 {% endblock %}
